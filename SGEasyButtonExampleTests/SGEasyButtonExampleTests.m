@@ -1,18 +1,18 @@
 //
-//  SGImagePositionButtonExampleTests.m
-//  SGImagePositionButtonExampleTests
+//  SGEasyButtonExampleTests.m
+//  SGEasyButtonExampleTests
 //
-//  Created by kingsic on 2017/9/17.
+//  Created by kingsic on 2017/9/18.
 //  Copyright © 2017年 kingsic. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface SGImagePositionButtonExampleTests : XCTestCase
+@interface SGEasyButtonExampleTests : XCTestCase
 
 @end
 
-@implementation SGImagePositionButtonExampleTests
+@implementation SGEasyButtonExampleTests
 
 - (void)setUp {
     [super setUp];

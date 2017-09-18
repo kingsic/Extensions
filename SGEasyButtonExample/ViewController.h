@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  SGImagePositionButtonExample
+//  SGEasyButtonExample
 //
-//  Created by kingsic on 2017/9/17.
+//  Created by kingsic on 2017/9/18.
 //  Copyright © 2017年 kingsic. All rights reserved.
 //
 

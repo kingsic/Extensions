@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ogk-uL-w81">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SGEasyButton-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="rl9-2V-SlE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Ux-jg-ZyX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="OH7-y4-gtG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wsC-T6-yNw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rl9-2V-SlE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BBp-QL-gt9"/>
+                            <constraint firstItem="0Ux-jg-ZyX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EGu-F7-PWF"/>
+                            <constraint firstItem="rl9-2V-SlE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JRz-sy-um7"/>
+                            <constraint firstAttribute="trailing" secondItem="rl9-2V-SlE" secondAttribute="trailing" id="U9P-9w-14R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Ux-jg-ZyX" secondAttribute="bottom" id="WIG-Z5-xj7"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ux-jg-ZyX" secondAttribute="trailing" id="g54-Vb-Lkw"/>
+                            <constraint firstItem="0Ux-jg-ZyX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jOX-9E-zpS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rl9-2V-SlE" secondAttribute="bottom" id="xmB-UQ-4kk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SGEasyButton" id="ad5-jT-aRc"/>
+                    <connections>
+                        <outlet property="tableView" destination="0Ux-jg-ZyX" id="lud-nh-0pw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K1r-iy-NCC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ogk-uL-w81" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xwo-Yx-qh0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="A8c-jb-EE5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLC-Fx-LLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_image" width="350" height="622"/>
+    </resources>
+</document>
