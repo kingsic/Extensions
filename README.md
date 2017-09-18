@@ -1,22 +1,35 @@
 
-# SGImagePositionButton
-
-一句代码搞定按钮的图片与文字布局样式
+# SGEasyButton
 
 
-## 效果图
+## 前沿
+* SGEasyButton 是关于 UIButton 的一个分类集合
 
-![](https://github.com/kingsic/SGImagePositionButton/raw/master/Picture/sorgle.png)
+
+### 效果图：一句代码搞定按钮的图片与文字布局样式
+
+![](https://github.com/kingsic/SGEasyButton/raw/master/Picture/sorgle.png)
 
 
-## SGImagePositionButton 集成
+## 主要内容的介绍
 
-* 1、CocoaPods 导入 pod 'SGImagePositionButton'
+* `UIButton+SGEvent (按钮响应事件时间间隔)`<br>
 
-* 2、下载、拖拽 “SGImagePositionButton” 文件夹到工程中
+* `UIButton+SGImagePosition (一句代码搞定按钮的图片与文字布局样式)`<br>
+
+
+## SGEasyButton 集成
+
+* 1、CocoaPods 导入 pod 'SGEasyButton'
+
+* 2、下载、拖拽 “SGEasyButton” 文件夹到工程中
  
-* 3、导入 SGImagePositionButton.h 头文件并调用 "SG_imagePosition:spacing" 方法即可设置你想要的布局样式
+#### 按钮响应事件时间间隔的设置
+```Objective-C
+    button.SG_timeInterval = 2;
+```
 
+#### 一句代码搞定按钮的图片与文字布局样式
 ```Objective-C
 /**
  *  设置图片与文字样式
@@ -24,7 +37,7 @@
  *  @param imagePosition     图片位置样式
  *  @param spacing           图片与文字之间的间距
  */
-- (void)SG_imagePosition:(SGImagePosition)imagePosition spacing:(CGFloat)spacing;
+- (void)SG_imagePositionStyle:(SGImagePositionStyle)imagePositionStyle spacing:(CGFloat)spacing;
 ```
 
 
