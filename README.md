@@ -34,8 +34,8 @@
 /**
  *  设置图片与文字样式
  *
- *  @param imagePosition     图片位置样式
- *  @param spacing           图片与文字之间的间距
+ *  @param imagePositionStyle     图片位置样式
+ *  @param spacing                图片与文字之间的间距
  */
 - (void)SG_imagePositionStyle:(SGImagePositionStyle)imagePositionStyle spacing:(CGFloat)spacing;
 ```
@@ -43,5 +43,5 @@
 
 ## Concluding remarks
 
-* 如在使用中, 遇到什么问题或有更好建议者, 请记得 [Issues me](https://github.com/kingsic/SGImagePositionButton/issues) 或 kingsic@126.com 邮箱联系我
+* 如在使用中, 遇到什么问题或有更好建议者, 请记得 [Issues me](https://github.com/kingsic/SGEasyButton/issues) 或 kingsic@126.com 邮箱联系我
 
