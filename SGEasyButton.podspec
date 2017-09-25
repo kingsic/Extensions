@@ -1,8 +1,8 @@
 
 Pod::Spec.new do |s|
     s.name         = 'SGEasyButton'
-    s.version      = '0.0.1'
-    s.summary      = 'A category about UIButton'
+    s.version      = '0.0.2'
+    s.summary      = 'a category of UIButton'
     s.homepage     = 'https://github.com/kingsic/SGEasyButton'
     s.license      = 'MIT'
     s.authors      = {'kingsic' => 'kingsic@126.com'}

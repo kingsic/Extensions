@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SGEventVC.h"
+#import "SGCountdownVC.h"
 #import "SGImagePositionVC.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -21,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.dataList = @[@"UIButton+SGEvent", @"UIButton+SGImagePosition"];
+    self.dataList = @[@"UIButton+SGEvent", @"UIButton+SGCountdown", @"UIButton+SGImagePosition"];
     
     [self foundTableView];
 }
@@ -49,6 +50,9 @@
         SGEventVC *EVC = [[SGEventVC alloc] init];
         [self.navigationController pushViewController:EVC animated:YES];
     } else if (indexPath.row == 1) {
+        SGCountdownVC *CdVC = [[SGCountdownVC alloc] init];
+        [self.navigationController pushViewController:CdVC animated:YES];
+    } else {
         SGImagePositionVC *IPVC = [[SGImagePositionVC alloc] init];
         [self.navigationController pushViewController:IPVC animated:YES];
     }

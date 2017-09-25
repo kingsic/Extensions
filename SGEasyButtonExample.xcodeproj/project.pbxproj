@@ -21,6 +21,9 @@
 		8D2721B01F6FFD0B0041A9CD /* SGImagePositionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2721AE1F6FFD0B0041A9CD /* SGImagePositionVC.xib */; };
 		8D2721B41F6FFE670041A9CD /* SGEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2721B21F6FFE660041A9CD /* SGEventVC.m */; };
 		8D2721B51F6FFE670041A9CD /* SGEventVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2721B31F6FFE660041A9CD /* SGEventVC.xib */; };
+		8D2721B81F79311B0041A9CD /* UIButton+SGCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2721B71F79311B0041A9CD /* UIButton+SGCountdown.m */; };
+		8D2721BB1F7932610041A9CD /* SGCountdownVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2721BA1F7932610041A9CD /* SGCountdownVC.m */; };
+		8D2721BD1F79326F0041A9CD /* SGCountdownVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2721BC1F79326F0041A9CD /* SGCountdownVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,11 @@
 		8D2721B11F6FFE660041A9CD /* SGEventVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEventVC.h; sourceTree = "<group>"; };
 		8D2721B21F6FFE660041A9CD /* SGEventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGEventVC.m; sourceTree = "<group>"; };
 		8D2721B31F6FFE660041A9CD /* SGEventVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGEventVC.xib; sourceTree = "<group>"; };
+		8D2721B61F79311B0041A9CD /* UIButton+SGCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGCountdown.h"; sourceTree = "<group>"; };
+		8D2721B71F79311B0041A9CD /* UIButton+SGCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGCountdown.m"; sourceTree = "<group>"; };
+		8D2721B91F7932610041A9CD /* SGCountdownVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGCountdownVC.h; sourceTree = "<group>"; };
+		8D2721BA1F7932610041A9CD /* SGCountdownVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGCountdownVC.m; sourceTree = "<group>"; };
+		8D2721BC1F79326F0041A9CD /* SGCountdownVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGCountdownVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,8 @@
 				8D2721A41F6FF5D00041A9CD /* SGEasyButton.h */,
 				8D2721A81F6FF6A00041A9CD /* UIButton+SGEvent.h */,
 				8D2721A91F6FF6A00041A9CD /* UIButton+SGEvent.m */,
+				8D2721B61F79311B0041A9CD /* UIButton+SGCountdown.h */,
+				8D2721B71F79311B0041A9CD /* UIButton+SGCountdown.m */,
 				8D2721A51F6FF5ED0041A9CD /* UIButton+SGImagePosition.h */,
 				8D2721A61F6FF5ED0041A9CD /* UIButton+SGImagePosition.m */,
 			);
@@ -177,6 +187,9 @@
 				8D2721B11F6FFE660041A9CD /* SGEventVC.h */,
 				8D2721B21F6FFE660041A9CD /* SGEventVC.m */,
 				8D2721B31F6FFE660041A9CD /* SGEventVC.xib */,
+				8D2721B91F7932610041A9CD /* SGCountdownVC.h */,
+				8D2721BA1F7932610041A9CD /* SGCountdownVC.m */,
+				8D2721BC1F79326F0041A9CD /* SGCountdownVC.xib */,
 				8D2721AC1F6FFD0B0041A9CD /* SGImagePositionVC.h */,
 				8D2721AD1F6FFD0B0041A9CD /* SGImagePositionVC.m */,
 				8D2721AE1F6FFD0B0041A9CD /* SGImagePositionVC.xib */,
@@ -292,6 +305,7 @@
 			files = (
 				8D2721801F6FF5760041A9CD /* LaunchScreen.storyboard in Resources */,
 				8D2721B01F6FFD0B0041A9CD /* SGImagePositionVC.xib in Resources */,
+				8D2721BD1F79326F0041A9CD /* SGCountdownVC.xib in Resources */,
 				8D2721B51F6FFE670041A9CD /* SGEventVC.xib in Resources */,
 				8D27217D1F6FF5760041A9CD /* Assets.xcassets in Resources */,
 				8D27217B1F6FF5760041A9CD /* Main.storyboard in Resources */,
@@ -320,10 +334,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2721AA1F6FF6A00041A9CD /* UIButton+SGEvent.m in Sources */,
+				8D2721B81F79311B0041A9CD /* UIButton+SGCountdown.m in Sources */,
 				8D2721A71F6FF5ED0041A9CD /* UIButton+SGImagePosition.m in Sources */,
 				8D2721B41F6FFE670041A9CD /* SGEventVC.m in Sources */,
 				8D2721781F6FF5760041A9CD /* ViewController.m in Sources */,
 				8D2721751F6FF5760041A9CD /* AppDelegate.m in Sources */,
+				8D2721BB1F7932610041A9CD /* SGCountdownVC.m in Sources */,
 				8D2721721F6FF5760041A9CD /* main.m in Sources */,
 				8D2721AF1F6FFD0B0041A9CD /* SGImagePositionVC.m in Sources */,
 			);
@@ -559,6 +575,7 @@
 				8D27219C1F6FF5760041A9CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D27219D1F6FF5760041A9CD /* Build configuration list for PBXNativeTarget "SGEasyButtonExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +584,7 @@
 				8D27219F1F6FF5760041A9CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D2721A01F6FF5760041A9CD /* Build configuration list for PBXNativeTarget "SGEasyButtonExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +593,7 @@
 				8D2721A21F6FF5760041A9CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

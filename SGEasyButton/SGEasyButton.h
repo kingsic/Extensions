@@ -5,11 +5,12 @@
 //      GitHub：https://github.com/kingsic
 //
 //  SGEasyButton.h
-//  Version 0.0.1
+//  Version 0.0.2
 //
 //  Created by kingsic on 2017/9/18.
 //  Copyright © 2017年 kingsic. All rights reserved.
 //
 
 #import "UIButton+SGEvent.h"
+#import "UIButton+SGCountdown.h"
 #import "UIButton+SGImagePosition.h"
