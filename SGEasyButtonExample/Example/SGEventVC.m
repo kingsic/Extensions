@@ -11,7 +11,6 @@
 
 @interface SGEventVC ()
 @property (weak, nonatomic) IBOutlet UIButton *btn;
-
 @end
 
 @implementation SGEventVC
@@ -19,8 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    _btn.SG_timeInterval = 2;
 }
 
 - (IBAction)clickEvent:(UIButton *)sender {

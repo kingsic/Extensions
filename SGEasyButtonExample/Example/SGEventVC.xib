@@ -21,8 +21,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNT-5S-TMf">
-                    <rect key="frame" x="78" y="318" width="220" height="30"/>
-                    <state key="normal" title="连续点击我，2s 内只能响应一次"/>
+                    <rect key="frame" x="79" y="318" width="218" height="30"/>
+                    <state key="normal" title="连续点击我，1s 内只能响应一次"/>
                     <connections>
                         <action selector="clickEvent:" destination="-1" eventType="touchUpInside" id="QaA-xy-hwf"/>
                     </connections>

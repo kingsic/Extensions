@@ -28,7 +28,7 @@
  
 #### 一句代码搞定按钮的连续点击问题
 ```Objective-C
-button.SG_timeInterval = 2;
+button.SG_eventTimeInterval = 2;
 ```
 
 #### 一句代码搞定按钮的获取验证码设置

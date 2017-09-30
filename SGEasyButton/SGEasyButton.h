@@ -5,7 +5,7 @@
 //      GitHub：https://github.com/kingsic
 //
 //  SGEasyButton.h
-//  Version 0.0.2
+//  Version 0.0.3
 //
 //  Created by kingsic on 2017/9/18.
 //  Copyright © 2017年 kingsic. All rights reserved.

@@ -2,7 +2,7 @@
 //  如遇到问题或有更好方案，请通过以下方式进行联系
 //      QQ：1357127436
 //      Email：kingsic@126.com
-//      GitHub：https://github.com/kingsic/SGEasyButton.git
+//      GitHub：https://github.com/kingsic/SGEasyButton
 //
 //  UIButton+SGEvent.m
 //  UIButton+SGEvent
@@ -15,51 +15,60 @@
 #import <objc/runtime.h>
 
 @interface UIButton ()
-@property (nonatomic, assign) NSTimeInterval temp_timeInterval;
+/// 是否忽略点击事件；YES，忽略点击事件，NO，允许点击事件
+@property (nonatomic, assign) BOOL isIgnoreEvent;
 @end
 
 @implementation UIButton (SGHelper)
 
+static const CGFloat SGEventDefaultTimeInterval = 1;
+
+- (BOOL)isIgnoreEvent {
+    return [objc_getAssociatedObject(self, @"isIgnoreEvent") boolValue];
+}
+
+- (void)setIsIgnoreEvent:(BOOL)isIgnoreEvent {
+    objc_setAssociatedObject(self, @"isIgnoreEvent", @(isIgnoreEvent), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSTimeInterval)SG_eventTimeInterval {
+    return [objc_getAssociatedObject(self, @"SG_eventTimeInterval") doubleValue];
+}
+
+- (void)setSG_eventTimeInterval:(NSTimeInterval)SG_eventTimeInterval {
+    objc_setAssociatedObject(self, @"SG_eventTimeInterval", @(SG_eventTimeInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 + (void)load {
-    Method systemMethod = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
-    SEL sysSEL = @selector(sendAction:to:forEvent:);
-    
-    Method SGMethod = class_getInstanceMethod(self, @selector(SG_sendAction:to:forEvent:));
-    SEL SGSEL = @selector(SG_sendAction:to:forEvent:);
-    
-    BOOL addMethod = class_addMethod(self, SGSEL, method_getImplementation(SGMethod), method_getTypeEncoding(SGMethod));
-    if (addMethod) {
-        class_replaceMethod(self, sysSEL, method_getImplementation(systemMethod), method_getTypeEncoding(systemMethod));
-    } else {
-        method_exchangeImplementations(systemMethod, SGMethod);
-    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        SEL systemSEL = @selector(sendAction:to:forEvent:);
+        SEL replaceSEL = @selector(SG_sendAction:to:forEvent:);
+        Method systemMethod = class_getInstanceMethod(self, systemSEL);
+        Method replaceMethod = class_getInstanceMethod(self, replaceSEL);
+        
+        BOOL isAdd = class_addMethod(self, systemSEL, method_getImplementation(replaceMethod), method_getTypeEncoding(replaceMethod));
+        
+        if (isAdd) {
+            class_replaceMethod(self, replaceSEL, method_getImplementation(systemMethod), method_getTypeEncoding(systemMethod));
+        } else {
+            // 添加失败，说明本类中有 replaceMethod 的实现，此时只需要将 systemMethod 和 replaceMethod 的IMP互换一下即可
+            method_exchangeImplementations(systemMethod, replaceMethod);
+        }
+    });
 }
 
 - (void)SG_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
-    BOOL needSendAction = (NSDate.date.timeIntervalSince1970 - self.temp_timeInterval >= self.SG_timeInterval);
-
-    if (self.SG_timeInterval > 0) {
-        self.temp_timeInterval = NSDate.date.timeIntervalSince1970;
+    self.SG_eventTimeInterval = self.SG_eventTimeInterval == 0 ? SGEventDefaultTimeInterval : self.SG_eventTimeInterval;
+    if (self.isIgnoreEvent){
+        return;
+    } else if (self.SG_eventTimeInterval > 0) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.SG_eventTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self setIsIgnoreEvent:NO];
+        });
     }
-    
-    if (needSendAction) {
-        [self SG_sendAction:action to:target forEvent:event];
-    }
-}
-
-#pragma mark - - - set、get
-- (void)setSG_timeInterval:(NSTimeInterval)SG_timeInterval {
-    objc_setAssociatedObject(self, "UIButton_SG_timeInterval", @(SG_timeInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (NSTimeInterval)SG_timeInterval {
-    return [objc_getAssociatedObject(self, "UIButton_SG_timeInterval") doubleValue];
-}
-
-- (void)setTemp_timeInterval:(NSTimeInterval)temp_timeInterval {
-    objc_setAssociatedObject(self, "UIButton_temp_timeInterval", @(temp_timeInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (NSTimeInterval)temp_timeInterval {
-    return [objc_getAssociatedObject(self, "UIButton_temp_timeInterval") doubleValue];
+    self.isIgnoreEvent = YES;
+    [self SG_sendAction:action to:target forEvent:event];
 }
 
 
