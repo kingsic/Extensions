@@ -3,6 +3,7 @@
 
 
 ## 前沿
+
 * SGEasyButton 是关于 UIButton 的一个分类集合
 
 
@@ -22,22 +23,22 @@
 
 ## SGEasyButton 集成
 
-* 1、CocoaPods 导入 pod 'SGEasyButton' '~> 0.0.2'
+* 1、CocoaPods 导入 pod 'SGEasyButton' '~> 0.0.3'
 
 * 2、下载、拖拽 “SGEasyButton” 文件夹到工程中
  
 #### 一句代码搞定按钮的连续点击问题
-```Objective-C
+```
 button.SG_eventTimeInterval = 2;
 ```
 
 #### 一句代码搞定按钮的获取验证码设置
-```Objective-C
+```
 [button SG_countdownWithSec:30];
 ```
 
 #### 一句代码搞定按钮的图片与文字布局样式
-```Objective-C
+```
 /**
  *  设置图片与文字样式
  *
