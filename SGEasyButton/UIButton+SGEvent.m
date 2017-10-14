@@ -21,7 +21,7 @@
 
 @implementation UIButton (SGHelper)
 
-static const CGFloat SGEventDefaultTimeInterval = 1;
+static const CGFloat SGEventDefaultTimeInterval = 0;
 
 - (BOOL)isIgnoreEvent {
     return [objc_getAssociatedObject(self, @"isIgnoreEvent") boolValue];
@@ -62,7 +62,7 @@ static const CGFloat SGEventDefaultTimeInterval = 1;
     self.SG_eventTimeInterval = self.SG_eventTimeInterval == 0 ? SGEventDefaultTimeInterval : self.SG_eventTimeInterval;
     if (self.isIgnoreEvent){
         return;
-    } else if (self.SG_eventTimeInterval > 0) {
+    } else if (self.SG_eventTimeInterval >= 0) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.SG_eventTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self setIsIgnoreEvent:NO];
         });

@@ -14,7 +14,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIButton (SGEvent)
-/** 按钮事件响应间隔，默认 1.0s */
+/** 按钮事件响应间隔 */
 @property (nonatomic, assign) NSTimeInterval SG_eventTimeInterval;
 
 @end

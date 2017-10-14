@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.btn.SG_eventTimeInterval = 1;
 }
 
 - (IBAction)clickEvent:(UIButton *)sender {

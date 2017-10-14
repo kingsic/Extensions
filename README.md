@@ -23,13 +23,13 @@
 
 ## SGEasyButton 集成
 
-* 1、CocoaPods 导入 pod 'SGEasyButton' '~> 0.0.3'
+* 1、CocoaPods 导入 pod 'SGEasyButton' '~> 0.0.4'
 
 * 2、下载、拖拽 “SGEasyButton” 文件夹到工程中
  
 #### 一句代码搞定按钮的连续点击问题
 ```
-button.SG_eventTimeInterval = 2;
+button.SG_eventTimeInterval = 1;
 ```
 
 #### 一句代码搞定按钮的获取验证码设置
