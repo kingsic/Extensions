@@ -46,17 +46,30 @@ button.SG_eventTimeInterval = 1;
  *  @param spacing                图片与文字之间的间距
  */
 - (void)SG_imagePositionStyle:(SGImagePositionStyle)imagePositionStyle spacing:(CGFloat)spacing;
+
+/**
+ *  设置图片与文字样式（推荐使用）
+ *
+ *  @param imagePositionStyle     图片位置样式
+ *  @param spacing                图片与文字之间的间距
+ *  @param imagePositionBlock     在此 Block 中设置按钮的图片、文字以及 contentHorizontalAlignment 属性
+ */
+- (void)SG_imagePositionStyle:(SGImagePositionStyle)imagePositionStyle spacing:(CGFloat)spacing imagePositionBlock:(void (^)(UIButton *button))imagePositionBlock;
 ```
 
 
 ## 版本记录
 
-2017-9-17 ：初始化版本
+2017-09-17 ：初始化版本
 
-2017-9-25 ：新增获取验证码分类
+2017-09-25 ：新增获取验证码分类
+
+2017-11-21 ：v0.0.5 新增 SG_imagePositionStyle:spacing:imagePosition 方法
 
 
 ## Concluding remarks
 
 * 如在使用中, 遇到什么问题或有更好建议者, 请记得 [Issues me](https://github.com/kingsic/SGEasyButton/issues) 或 kingsic@126.com 邮箱联系我
+
+* 技术交流群：429899752
 
