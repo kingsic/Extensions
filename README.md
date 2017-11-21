@@ -23,7 +23,7 @@
 
 ## SGEasyButton 集成
 
-* 1、CocoaPods 导入 pod 'SGEasyButton' '~> 0.0.4'
+* 1、CocoaPods 导入 pod 'SGEasyButton' '~> 0.0.5'
 
 * 2、下载、拖拽 “SGEasyButton” 文件夹到工程中
  
@@ -56,6 +56,13 @@ button.SG_eventTimeInterval = 1;
  */
 - (void)SG_imagePositionStyle:(SGImagePositionStyle)imagePositionStyle spacing:(CGFloat)spacing imagePositionBlock:(void (^)(UIButton *button))imagePositionBlock;
 ```
+
+
+## 问题及解决方案
+
+#### 1、CocoaPods 安装 SGEasyButton 时，遇到的问题及解决方案
+
+* 若在使用 CocoaPods 安装 SGEasyButton 时，出现 [!] Unable to find a specification for SGEasyButton 提示时，打开终端先输入 pod repo remove master；执行完毕后再输入 pod setup 即可 (可能会等待一段时间)
 
 
 ## 版本记录
