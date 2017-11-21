@@ -13,7 +13,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^SGCountdownCompletionBlock)();
+typedef void(^SGCountdownCompletionBlock)(void);
 
 @interface UIButton (SGCountdown)
 /** 倒计时，s倒计 */

@@ -56,7 +56,7 @@
                         <constraint firstAttribute="height" constant="30" id="3Rp-He-7ry"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="间距调整" image="image">
+                    <state key="normal">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>

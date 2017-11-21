@@ -27,7 +27,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [_defaultBtn2 SG_imagePositionStyle:(SGImagePositionStyleDefault) spacing:5];
+    // 推荐使用
+    [_defaultBtn2 SG_imagePositionStyle:(SGImagePositionStyleDefault) spacing:5 imagePositionBlock:^(UIButton *button) {
+        [button setTitle:@"间距调整" forState:(UIControlStateNormal)];
+        [button setImage:[UIImage imageNamed:@"image"] forState:(UIControlStateNormal)];
+    }];
     
     // right
     [_rightBtn SG_imagePositionStyle:(SGImagePositionStyleRight) spacing:0];
