@@ -78,5 +78,3 @@ button.SG_eventTimeInterval = 1;
 
 * 如在使用中, 遇到什么问题或有更好建议者, 请记得 [Issues me](https://github.com/kingsic/SGEasyButton/issues) 或 kingsic@126.com 邮箱联系我
 
-* 技术交流群：429899752
-
