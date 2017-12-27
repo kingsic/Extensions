@@ -19,7 +19,7 @@
 @property (nonatomic, assign) BOOL isIgnoreEvent;
 @end
 
-@implementation UIButton (SGHelper)
+@implementation UIButton (SGEvent)
 
 static const CGFloat SGEventDefaultTimeInterval = 0;
 
@@ -28,7 +28,7 @@ static const CGFloat SGEventDefaultTimeInterval = 0;
 }
 
 - (void)setIsIgnoreEvent:(BOOL)isIgnoreEvent {
-    objc_setAssociatedObject(self, @"isIgnoreEvent", @(isIgnoreEvent), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @"isIgnoreEvent", @(isIgnoreEvent), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (NSTimeInterval)SG_eventTimeInterval {
@@ -36,7 +36,7 @@ static const CGFloat SGEventDefaultTimeInterval = 0;
 }
 
 - (void)setSG_eventTimeInterval:(NSTimeInterval)SG_eventTimeInterval {
-    objc_setAssociatedObject(self, @"SG_eventTimeInterval", @(SG_eventTimeInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @"SG_eventTimeInterval", @(SG_eventTimeInterval), OBJC_ASSOCIATION_ASSIGN);
 }
 
 + (void)load {
