@@ -65,16 +65,11 @@ button.SG_eventTimeInterval = 1;
 * 若在使用 CocoaPods 安装 SGEasyButton 时，出现 [!] Unable to find a specification for SGEasyButton 提示时，打开终端先输入 pod repo remove master；执行完毕后再输入 pod setup 即可 (可能会等待一段时间)
 
 
-## 版本记录
+## Author
 
-2017-09-17 ：初始化版本
+* Email：kingsic@126.com
 
-2017-09-25 ：新增获取验证码分类
+* QQ群：(付费群)<br>
+![](https://github.com/kingsic/Kar98k/blob/master/Source/QQGroup_qrcode.png)
 
-2017-11-21 ：v0.0.5 新增 SG_imagePositionStyle:spacing:imagePosition 方法
-
-
-## Concluding remarks
-
-* 如在使用中, 遇到什么问题或有更好建议者, 请记得 [Issues me](https://github.com/kingsic/SGEasyButton/issues) 或 kingsic@126.com 邮箱联系我
 
