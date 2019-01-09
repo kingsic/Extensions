@@ -64,12 +64,3 @@ button.SG_eventTimeInterval = 1;
 
 * 若在使用 CocoaPods 安装 SGEasyButton 时，出现 [!] Unable to find a specification for SGEasyButton 提示时，打开终端先输入 pod repo remove master；执行完毕后再输入 pod setup 即可 (可能会等待一段时间)
 
-
-## Author
-
-* Email：kingsic@126.com
-
-* QQ群：(付费群)<br>
-![](https://github.com/kingsic/Kar98k/blob/master/Source/QQGroup_qrcode.png)
-
-
