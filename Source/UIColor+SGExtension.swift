@@ -25,7 +25,7 @@ extension UIColor {
     /// - parameter hexString: Hexadecimal code
     /// - parameter alpha: CGFloat
     ///
-    /// - returns : Hexadecimal coded color
+    /// - returns: Hexadecimal coded color
     ///
     class func sg_color(hexString: String, alpha: CGFloat) -> UIColor {
         let tempHexString = hexString.replacingOccurrences(of: "#", with: "")
@@ -48,7 +48,7 @@ extension UIColor {
     ///
     /// - parameter hexString: Hexadecimal code
     ///
-    /// - returns : Hexadecimal coded color
+    /// - returns: Hexadecimal coded color
     ///
     class func sg_color(hexString: String) -> UIColor {
         return self.sg_color(hexString: hexString, alpha: 1.0)

@@ -12,7 +12,7 @@ extension UIView {
     ///
     /// Gets the controller where the current view is located
     ///
-    /// - returns : The controller where the current view is located
+    /// - returns: The controller where the current view is located
     ///
     func sg_getController() -> UIViewController? {
         var nextResponder: UIResponder? = self.next

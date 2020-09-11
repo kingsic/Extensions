@@ -14,7 +14,7 @@ extension String {
     ///
     /// - parameter font: UIFont
     ///
-    /// - returns : The width of the calculated string
+    /// - returns: The width of the calculated string
     ///
     func sg_calculateWidth(font: UIFont) -> CGFloat {
         let attrs = [NSAttributedString.Key.font: font]
@@ -27,7 +27,7 @@ extension String {
     /// - parameter width: CGFloat
     /// - parameter font: UIFont
     ///
-    /// - returns : The height of the calculated string
+    /// - returns: The height of the calculated string
     ///
     func sg_calculateHeight(width: CGFloat, font: UIFont) -> CGFloat {
         let attrs = [NSAttributedString.Key.font: font]

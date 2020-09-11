@@ -12,7 +12,7 @@ extension UIImage {
     ///
     /// Circle UIImage
     ///
-    /// - returns : The height of the calculated string
+    /// - returns: The height of the calculated string
     ///
     func sg_circleImage() -> UIImage {
         UIGraphicsBeginImageContext(self.size)
@@ -30,7 +30,7 @@ extension UIImage {
     ///
     /// - parameter named: The name of the image
     ///
-    /// - returns : Circle Image
+    /// - returns: Circle Image
     ///
     class func SG_circleImage(named: String) -> UIImage {
         return (self.init(named: named)?.sg_circleImage())!

@@ -18,7 +18,7 @@ extension UIButton {
     ///
     /// - parameter time: Interval time
     ///
-    /// - note:Used in the click event method of a button
+    /// - note: Used in the click event method of a button
     ///
     func sg_timeInterval(time: TimeInterval) {
         self.isUserInteractionEnabled = false
