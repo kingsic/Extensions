@@ -10,6 +10,20 @@ import UIKit
 
 extension UIView {
     ///
+    /// Loading view from Nib
+    ///
+    /// Nibname doesn't need to be passed, If empty, the caller's own name
+    ///
+    /// - parameter nibName: Nib View name, can be empty
+    ///
+    /// - returns: View loaded from Nib
+    ///
+    class func sg_loadFromNib(_ nibName: String? = nil) -> UIView {
+        let name = nibName == nil ? "\(self)" : nibName!
+        return Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as! UIView
+    }
+    
+    ///
     /// Gets the controller where the current view is located
     ///
     /// - returns: The controller where the current view is located
@@ -24,10 +38,12 @@ extension UIView {
         } while nextResponder != nil
         return nil
     }
+    
     /// Add view to window
     func sg_addToKeyWindow() {
         UIApplication.shared.windows.first?.addSubview(self)
     }
+    
     /// Remove all subviews on the view
     func sg_removeAllSubviews() {
         for tempSubviews in self.subviews {
@@ -74,6 +90,7 @@ extension UIView {
         shapeLayer.path = bezierPath.cgPath
         self.layer.mask = shapeLayer
     }
+    
     ///
     /// Add a shadow to the view
     ///
