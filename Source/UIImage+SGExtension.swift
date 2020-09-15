@@ -35,4 +35,6 @@ extension UIImage {
     class func SG_circleImage(named: String) -> UIImage {
         return (self.init(named: named)?.sg_circleImage())!
     }
+    
+    
 }

@@ -23,24 +23,16 @@ extension UIViewController {
     ///
     /// Return to the specified controller
     ///
-    /// With return animation
-    ///
     /// - parameter aClass: Specifies the controller class
+    /// - parameter animated: Returns whether animation is required, default is true
     ///
-    func sg_popToViewController(aClass: AnyClass) {
-        sg_popToViewController(aClass: aClass, animated: true)
-    }
-    ///
-    /// Return to the specified controller
-    ///
-    /// - parameter aClass: Specifies the controller class
-    /// - parameter animated: Returns whether animation is required
-    ///
-    func sg_popToViewController(aClass: AnyClass, animated: Bool) {
+    func sg_popToViewController(aClass: AnyClass, animated: Bool = true) {
         for vc in (self.navigationController?.viewControllers)! {
             if vc.isKind(of: aClass) {
                 self.navigationController?.popToViewController(vc, animated: animated)
             }
         }
     }
+    
+    
 }

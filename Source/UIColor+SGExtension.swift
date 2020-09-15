@@ -23,11 +23,11 @@ extension UIColor {
     /// Conversion of hexadecimal encoding to RGB format
     ///
     /// - parameter hexString: Hexadecimal code
-    /// - parameter alpha: CGFloat
+    /// - parameter alpha: CGFloat, default is 1.0
     ///
     /// - returns: Hexadecimal coded color
     ///
-    class func sg_color(hexString: String, alpha: CGFloat) -> UIColor {
+    class func sg_color(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         let tempHexString = hexString.replacingOccurrences(of: "#", with: "")
         let scanner = Scanner(string: tempHexString)
         var color: UInt64 = 0
@@ -43,14 +43,6 @@ extension UIColor {
         let blue  = CGFloat(b) / 255.0
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
-    ///
-    /// Conversion of hexadecimal encoding to RGB format
-    ///
-    /// - parameter hexString: Hexadecimal code
-    ///
-    /// - returns: Hexadecimal coded color
-    ///
-    class func sg_color(hexString: String) -> UIColor {
-        return self.sg_color(hexString: hexString, alpha: 1.0)
-    }
+    
+    
 }

@@ -117,7 +117,9 @@ extension UIButton {
                 DispatchQueue.main.async {
                     self.isEnabled = true
                     self.setTitle("\(end)", for: .normal)
-                    completion!()
+                    if completion != nil {
+                        completion!()
+                    }
                 }
             } else {
                 tempSecond -= 1;
@@ -129,4 +131,6 @@ extension UIButton {
         }
         timer.resume()
     }
+    
+    
 }
