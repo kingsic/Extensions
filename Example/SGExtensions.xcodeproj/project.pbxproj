@@ -21,6 +21,8 @@
 		8DE2645D250BD8D900E23484 /* UIView+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE26457250BD8D900E23484 /* UIView+SGExtension.swift */; };
 		8DE2645E250BD8D900E23484 /* UIColor+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE26458250BD8D900E23484 /* UIColor+SGExtension.swift */; };
 		8DE2645F250BD8D900E23484 /* UIImage+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE26459250BD8D900E23484 /* UIImage+SGExtension.swift */; };
+		8DE2647F251A398400E23484 /* UITextField+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE2647E251A398400E23484 /* UITextField+SGExtension.swift */; };
+		8DE26483251A39CE00E23484 /* UIBarButtonItem+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE26482251A39CE00E23484 /* UIBarButtonItem+SGExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		8DE26457250BD8D900E23484 /* UIView+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SGExtension.swift"; sourceTree = "<group>"; };
 		8DE26458250BD8D900E23484 /* UIColor+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SGExtension.swift"; sourceTree = "<group>"; };
 		8DE26459250BD8D900E23484 /* UIImage+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SGExtension.swift"; sourceTree = "<group>"; };
+		8DE2647E251A398400E23484 /* UITextField+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+SGExtension.swift"; sourceTree = "<group>"; };
+		8DE26482251A39CE00E23484 /* UIBarButtonItem+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+SGExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +149,11 @@
 			isa = PBXGroup;
 			children = (
 				8DE26454250BD8D900E23484 /* String+SGExtension.swift */,
+				8DE26482251A39CE00E23484 /* UIBarButtonItem+SGExtension.swift */,
 				8DE26455250BD8D900E23484 /* UIButton+SGExtension.swift */,
 				8DE26458250BD8D900E23484 /* UIColor+SGExtension.swift */,
 				8DE26459250BD8D900E23484 /* UIImage+SGExtension.swift */,
+				8DE2647E251A398400E23484 /* UITextField+SGExtension.swift */,
 				8DE26457250BD8D900E23484 /* UIView+SGExtension.swift */,
 				8DE26456250BD8D900E23484 /* UIViewController+SGExtension.swift */,
 			);
@@ -288,7 +294,9 @@
 			files = (
 				8DE2645A250BD8D900E23484 /* String+SGExtension.swift in Sources */,
 				8DE2645B250BD8D900E23484 /* UIButton+SGExtension.swift in Sources */,
+				8DE2647F251A398400E23484 /* UITextField+SGExtension.swift in Sources */,
 				8DE2645F250BD8D900E23484 /* UIImage+SGExtension.swift in Sources */,
+				8DE26483251A39CE00E23484 /* UIBarButtonItem+SGExtension.swift in Sources */,
 				8DE2645D250BD8D900E23484 /* UIView+SGExtension.swift in Sources */,
 				8DE2645E250BD8D900E23484 /* UIColor+SGExtension.swift in Sources */,
 				8DE2645C250BD8D900E23484 /* UIViewController+SGExtension.swift in Sources */,

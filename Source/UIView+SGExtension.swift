@@ -90,6 +90,18 @@ extension UIView {
         shapeLayer.path = bezierPath.cgPath
         self.layer.mask = shapeLayer
     }
+    ///
+    /// Add border width and border color
+    ///
+    /// Use layer to add border width and border color
+    ///
+    /// - parameter width: Border width
+    /// - parameter color: Border color
+    ///
+    func sg_addLayerBorder(width: CGFloat, color: UIColor) {
+        self.layer.borderWidth = width
+        self.layer.borderColor = color.cgColor
+    }
     
     ///
     /// Add a shadow to the view

@@ -16,7 +16,7 @@ extension String {
     ///
     /// - returns: The width of the calculated string
     ///
-    func sg_calculateWidth(font: UIFont) -> CGFloat {
+    func sg_calculateStringWidth(font: UIFont) -> CGFloat {
         let attrs = [NSAttributedString.Key.font: font]
         let tempRect = (self as NSString).boundingRect(with: CGSize(width: 0, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs, context: nil)
         return tempRect.size.width
@@ -29,18 +29,18 @@ extension String {
     ///
     /// - returns: The height of the calculated string
     ///
-    func sg_calculateHeight(width: CGFloat, font: UIFont) -> CGFloat {
+    func sg_calculateStringHeight(width: CGFloat, font: UIFont) -> CGFloat {
         let attrs = [NSAttributedString.Key.font: font]
         let tempRect = (self as NSString).boundingRect(with: CGSize(width: width, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs, context: nil)
         return tempRect.size.height
     }
     
     ///
-    /// Sets the spacing between the text above and below
+    /// Set the spacing between the string above and below
     ///
-    /// - parameter space: text spacing
+    /// - parameter space: string spacing
     ///
-    func sg_setText(space: CGFloat) -> NSMutableAttributedString {
+    func sg_setString(space: CGFloat) -> NSMutableAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = space
         let attributes = [NSAttributedString.Key.paragraphStyle: paragraphStyle]
@@ -49,37 +49,37 @@ extension String {
     }
     
     ///
-    /// Set location specific text color
+    /// Set location specific string color
     ///
-    /// - parameter color: Specific text color
-    /// - parameter range: Specific text location
+    /// - parameter color: Specific string color
+    /// - parameter range: Specific string location
     ///
-    func sg_setText(color: UIColor, range: NSRange) -> NSMutableAttributedString {
+    func sg_setString(color: UIColor, range: NSRange) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString(string: self)
         let attributes = [NSAttributedString.Key.foregroundColor: color]
         attributedString.addAttributes(attributes, range: range)
         return attributedString
     }
     ///
-    /// Set location specific text font
+    /// Set location specific string font
     ///
-    /// - parameter font: Specific text font
-    /// - parameter range: Specific text location
+    /// - parameter font: Specific string font
+    /// - parameter range: Specific string location
     ///
-    func sg_setText(font: UIFont, range: NSRange) -> NSMutableAttributedString {
+    func sg_setString(font: UIFont, range: NSRange) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString(string: self)
         let attributes = [NSAttributedString.Key.font: font]
         attributedString.addAttributes(attributes, range: range)
         return attributedString
     }
     ///
-    /// Set text color and size for specific location
+    /// Set string color and size for specific location
     ///
-    /// - parameter color: Specific text color
-    /// - parameter font: Specific text font
-    /// - parameter range: Specific text location
+    /// - parameter color: Specific string color
+    /// - parameter font: Specific string font
+    /// - parameter range: Specific string location
     ///
-    func sg_setText(color: UIColor, font: UIFont, range: NSRange) -> NSMutableAttributedString {
+    func sg_setString(color: UIColor, font: UIFont, range: NSRange) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString(string: self)
         let attributes = [NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.font: font]
         attributedString.addAttributes(attributes, range: range)
