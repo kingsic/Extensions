@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D76D8572524C81200AAD123 /* NSMutableAttributedString+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76D8562524C81200AAD123 /* NSMutableAttributedString+SGExtension.swift */; };
 		8DE26424250BD88700E23484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE26423250BD88700E23484 /* AppDelegate.swift */; };
 		8DE26426250BD88700E23484 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE26425250BD88700E23484 /* SceneDelegate.swift */; };
 		8DE26428250BD88700E23484 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE26427250BD88700E23484 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D76D8562524C81200AAD123 /* NSMutableAttributedString+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+SGExtension.swift"; sourceTree = "<group>"; };
 		8DE26420250BD88700E23484 /* SGExtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGExtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE26423250BD88700E23484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE26425250BD88700E23484 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		8DE26453250BD8D900E23484 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8D76D8562524C81200AAD123 /* NSMutableAttributedString+SGExtension.swift */,
 				8DE26454250BD8D900E23484 /* String+SGExtension.swift */,
 				8DE26482251A39CE00E23484 /* UIBarButtonItem+SGExtension.swift */,
 				8DE26455250BD8D900E23484 /* UIButton+SGExtension.swift */,
@@ -294,6 +297,7 @@
 			files = (
 				8DE2645A250BD8D900E23484 /* String+SGExtension.swift in Sources */,
 				8DE2645B250BD8D900E23484 /* UIButton+SGExtension.swift in Sources */,
+				8D76D8572524C81200AAD123 /* NSMutableAttributedString+SGExtension.swift in Sources */,
 				8DE2647F251A398400E23484 /* UITextField+SGExtension.swift in Sources */,
 				8DE2645F250BD8D900E23484 /* UIImage+SGExtension.swift in Sources */,
 				8DE26483251A39CE00E23484 /* UIBarButtonItem+SGExtension.swift in Sources */,

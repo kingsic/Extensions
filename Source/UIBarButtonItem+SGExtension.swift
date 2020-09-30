@@ -42,7 +42,6 @@ extension UIBarButtonItem {
     ///
     class func sg_barButtonItem(target: Any, action: Selector, imageName: String, highImageName: String) -> UIBarButtonItem {
         let btn = UIButton(type: .custom)
-        btn.backgroundColor = .brown
         btn.setBackgroundImage(UIImage(named: imageName), for: .normal)
         btn.setBackgroundImage(UIImage(named: highImageName), for: .highlighted)
         let width = btn.currentBackgroundImage?.size.width
