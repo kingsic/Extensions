@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSMutableAttributedString (SGAppKit)
 /** 类方法创建 NSMutableAttributedString */
 + (NSMutableAttributedString *(^)(NSString *))SG_initWithString;
+/** 首行缩进的距离 */
+- (NSMutableAttributedString *(^)(CGFloat))SG_firstLineHeadIndent;
 /** 设置上下文间距（NSTextAlignmentCenter，NSTextAlignmentRight 时，想要起作用，textAlignment 需设置在 attributedText 之后） */
 - (NSMutableAttributedString *(^)(CGFloat))SG_lineSpacing;
 /** 设置特定位置文字大小 */

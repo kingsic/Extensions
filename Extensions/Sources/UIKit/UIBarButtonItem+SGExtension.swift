@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIBarButtonItem {
+extension SG where Base: UIBarButtonItem {
     ///
     /// Return UIBarButtonItem with text only
     ///
@@ -20,7 +20,7 @@ extension UIBarButtonItem {
     ///
     /// - returns: UIBarButtonItem
     ///
-    class func sg_barButtonItem(target: Any, action: Selector, text: String, textColor: UIColor, textFont: UIFont) -> UIBarButtonItem {
+    static func barButtonItem(target: Any, action: Selector, text: String, textColor: UIColor, textFont: UIFont) -> UIBarButtonItem {
         let btn = UIButton(type: .custom)
         btn.setTitle(text, for: .normal)
         btn.setTitleColor(textColor, for: .normal)
@@ -40,7 +40,7 @@ extension UIBarButtonItem {
     ///
     /// - returns: UIBarButtonItem
     ///
-    class func sg_barButtonItem(target: Any, action: Selector, imageName: String, highImageName: String) -> UIBarButtonItem {
+    static func barButtonItem(target: Any, action: Selector, imageName: String, highImageName: String) -> UIBarButtonItem {
         let btn = UIButton(type: .custom)
         btn.setBackgroundImage(UIImage(named: imageName), for: .normal)
         btn.setBackgroundImage(UIImage(named: highImageName), for: .highlighted)

@@ -15,6 +15,15 @@
         return attributedString;
     };
 }
+/** 首行缩进的距离 */
+- (NSMutableAttributedString *(^)(CGFloat))SG_firstLineHeadIndent {
+    return ^(CGFloat space) {
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        paragraphStyle.firstLineHeadIndent = space;
+        [self addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [self length])];
+        return self;
+    };
+}
 /** 设置上下文间距 */
 - (NSMutableAttributedString *(^)(CGFloat))SG_lineSpacing {
     return ^(CGFloat space) {

@@ -51,7 +51,7 @@ extension String {
 }
 
 
-extension String {
+extension SG where Base == String {
     ///
     /// Calculate the width of the string according to the font size
     ///
@@ -59,9 +59,9 @@ extension String {
     ///
     /// - returns: The width of the calculated string
     ///
-    func sg_calculateStringWidth(font: UIFont) -> CGFloat {
+    func calculateStringWidth(font: UIFont) -> CGFloat {
         let attrs = [NSAttributedString.Key.font: font]
-        let tempRect = (self as NSString).boundingRect(with: CGSize(width: 0, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs, context: nil)
+        let tempRect = (base as NSString).boundingRect(with: CGSize(width: 0, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs, context: nil)
         return tempRect.size.width
     }
     ///
@@ -72,9 +72,9 @@ extension String {
     ///
     /// - returns: The height of the calculated string
     ///
-    func sg_calculateStringHeight(width: CGFloat, font: UIFont) -> CGFloat {
+    func calculateStringHeight(width: CGFloat, font: UIFont) -> CGFloat {
         let attrs = [NSAttributedString.Key.font: font]
-        let tempRect = (self as NSString).boundingRect(with: CGSize(width: width, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs, context: nil)
+        let tempRect = (base as NSString).boundingRect(with: CGSize(width: width, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs, context: nil)
         return tempRect.size.height
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D989CEA26F0334800AB1FC9 /* SG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D989CE826F0334700AB1FC9 /* SG.swift */; };
+		8D989CEF26F0AD9600AB1FC9 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D989CEE26F0AD9600AB1FC9 /* NextViewController.swift */; };
 		8DA9D2EB26EA06BA009CBAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9D2EA26EA06BA009CBAFC /* AppDelegate.swift */; };
 		8DA9D2ED26EA06BA009CBAFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9D2EC26EA06BA009CBAFC /* SceneDelegate.swift */; };
 		8DA9D2EF26EA06BA009CBAFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9D2EE26EA06BA009CBAFC /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D989CE826F0334700AB1FC9 /* SG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SG.swift; sourceTree = "<group>"; };
+		8D989CEE26F0AD9600AB1FC9 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		8DA9D2E726EA06BA009CBAFC /* Extensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA9D2EA26EA06BA009CBAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DA9D2EC26EA06BA009CBAFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +101,7 @@
 		8DA9D2DE26EA06BA009CBAFC = {
 			isa = PBXGroup;
 			children = (
-				8DA9D35226EA07FB009CBAFC /* Source */,
+				8DA9D35226EA07FB009CBAFC /* Sources */,
 				8DA9D2E926EA06BA009CBAFC /* Extensions */,
 				8DA9D30026EA06BF009CBAFC /* ExtensionsTests */,
 				8DA9D30B26EA06BF009CBAFC /* ExtensionsUITests */,
@@ -121,6 +125,7 @@
 				8DA9D2EA26EA06BA009CBAFC /* AppDelegate.swift */,
 				8DA9D2EC26EA06BA009CBAFC /* SceneDelegate.swift */,
 				8DA9D2EE26EA06BA009CBAFC /* ViewController.swift */,
+				8D989CEE26F0AD9600AB1FC9 /* NextViewController.swift */,
 				8DA9D2F026EA06BA009CBAFC /* Main.storyboard */,
 				8DA9D2F326EA06BF009CBAFC /* Assets.xcassets */,
 				8DA9D2F526EA06BF009CBAFC /* LaunchScreen.storyboard */,
@@ -147,13 +152,14 @@
 			path = ExtensionsUITests;
 			sourceTree = "<group>";
 		};
-		8DA9D35226EA07FB009CBAFC /* Source */ = {
+		8DA9D35226EA07FB009CBAFC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8D989CE826F0334700AB1FC9 /* SG.swift */,
 				8DA9D36626EA089C009CBAFC /* Foundation */,
 				8DA9D36526EA082C009CBAFC /* UIKit */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		8DA9D36526EA082C009CBAFC /* UIKit */ = {
@@ -310,12 +316,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA9D35D26EA07FB009CBAFC /* UITextField+SGExtension.swift in Sources */,
+				8D989CEF26F0AD9600AB1FC9 /* NextViewController.swift in Sources */,
 				8DA9D36126EA07FC009CBAFC /* UIView+SGExtension.swift in Sources */,
 				8DA9D35C26EA07FB009CBAFC /* String+SGExtension.swift in Sources */,
 				8DA9D36026EA07FC009CBAFC /* NSMutableAttributedString+SGExtension.swift in Sources */,
 				8DA9D2EF26EA06BA009CBAFC /* ViewController.swift in Sources */,
 				8DA9D36326EA07FC009CBAFC /* UIBarButtonItem+SGExtension.swift in Sources */,
 				8DA9D36226EA07FC009CBAFC /* UIColor+SGExtension.swift in Sources */,
+				8D989CEA26F0334800AB1FC9 /* SG.swift in Sources */,
 				8DA9D35E26EA07FB009CBAFC /* UIButton+SGExtension.swift in Sources */,
 				8DA9D2EB26EA06BA009CBAFC /* AppDelegate.swift in Sources */,
 				8DA9D2ED26EA06BA009CBAFC /* SceneDelegate.swift in Sources */,

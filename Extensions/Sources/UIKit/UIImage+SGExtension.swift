@@ -8,19 +8,19 @@
 
 import UIKit
 
-extension UIImage {
+extension SG where Base: UIImage {
     ///
     /// Circle UIImage
     ///
     /// - returns: The height of the calculated string
     ///
-    func sg_circleImage() -> UIImage {
-        UIGraphicsBeginImageContext(self.size)
+    func circleImage() -> UIImage {
+        UIGraphicsBeginImageContext(base.size)
         let context = UIGraphicsGetCurrentContext()
-        let rect = CGRect.init(x: 0, y: 0, width: self.size.width, height: self.size.height)
+        let rect = CGRect.init(x: 0, y: 0, width: base.size.width, height: base.size.height)
         context?.addEllipse(in: rect)
         context?.clip()
-        self.draw(in: rect)
+        base.draw(in: rect)
         let newimage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newimage!
@@ -32,8 +32,8 @@ extension UIImage {
     ///
     /// - returns: Circle Image
     ///
-    class func SG_circleImage(named: String) -> UIImage {
-        return (self.init(named: named)?.sg_circleImage())!
+    static func circleImage(named: String) -> UIImage {
+        return (Base.init(named: named)?.sg.circleImage())!
     }
     
     

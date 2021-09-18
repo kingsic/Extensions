@@ -8,16 +8,16 @@
 
 import UIKit
 
-extension UIViewController {
+extension SG where Base: UIViewController {
     ///
     /// Set navigation bar title color and size
     ///
     /// - parameter color: Title color
     /// - parameter font: Title font
     ///
-    func sg_setNavigationBarTitle(color: UIColor, font: UIFont) {
+    func setNavigationBarTitle(color: UIColor, font: UIFont) {
         let dict = [NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.font: font]
-        self.navigationController?.navigationBar.titleTextAttributes = dict
+        base.navigationController?.navigationBar.titleTextAttributes = dict
     }
     
     ///
@@ -26,10 +26,10 @@ extension UIViewController {
     /// - parameter aClass: Specifies the controller class
     /// - parameter animated: Returns whether animation is required, default is true
     ///
-    func sg_popToViewController(aClass: AnyClass, animated: Bool = true) {
-        for vc in (self.navigationController?.viewControllers)! {
+    func popToViewController(aClass: AnyClass, animated: Bool = true) {
+        for vc in (base.navigationController?.viewControllers)! {
             if vc.isKind(of: aClass) {
-                self.navigationController?.popToViewController(vc, animated: animated)
+                base.navigationController?.popToViewController(vc, animated: animated)
             }
         }
     }

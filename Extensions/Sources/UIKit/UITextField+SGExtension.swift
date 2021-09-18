@@ -8,17 +8,17 @@
 
 import UIKit
 
-extension UITextField {
+extension SG where Base: UITextField {
     ///
     /// Set the placeholder color of UITextField
     ///
     /// - parameter color: Placeholder color
     ///
-    func sg_setPlaceholder(color: UIColor) {
-        guard let tempPlaceholder = self.placeholder else { return }
+    func setPlaceholder(color: UIColor) {
+        guard let tempPlaceholder = base.placeholder else { return }
         let attributes = [NSAttributedString.Key.foregroundColor: color]
         let attributedString = NSAttributedString(string: tempPlaceholder, attributes: attributes)
-        self.attributedPlaceholder = attributedString
+        base.attributedPlaceholder = attributedString
     }
     
     

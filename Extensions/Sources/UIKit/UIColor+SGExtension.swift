@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIColor {
+extension SG where Base: UIColor {
     /// Random color
-    class var sg_randomColor: UIColor {
+    static var randomColor: UIColor {
         get {
             let red = CGFloat(arc4random()%256)/255.0
             let green = CGFloat(arc4random()%256)/255.0
@@ -27,7 +27,7 @@ extension UIColor {
     ///
     /// - returns: Hexadecimal coded color
     ///
-    class func sg_color(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+    static func color(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         let tempHexString = hexString.replacingOccurrences(of: "#", with: "")
         let scanner = Scanner(string: tempHexString)
         var color: UInt64 = 0

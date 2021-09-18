@@ -8,7 +8,20 @@
 
 import UIKit
 
-extension NSMutableAttributedString {
+extension SG where Base == NSMutableAttributedString {
+    ///
+    /// Set NSMutableAttributedString firstLineHeadIndent
+    ///
+    /// - parameter spacing: firstLineHeadIndent
+    ///
+    /// - returns: NSMutableAttributedString
+    ///
+    func firstLineHeadIndent(_ spacing: CGFloat) -> NSMutableAttributedString {
+        let paraStyle = NSMutableParagraphStyle()
+        paraStyle.firstLineHeadIndent = spacing
+        base.addAttribute(NSAttributedString.Key.paragraphStyle, value: paraStyle, range: NSMakeRange(0, base.string.count))
+        return base
+    }
     ///
     /// Set NSMutableAttributedString line spacing
     ///
@@ -16,11 +29,11 @@ extension NSMutableAttributedString {
     ///
     /// - returns: NSMutableAttributedString
     ///
-    func sg_lineSpacing(_ spacing: CGFloat) -> NSMutableAttributedString {
+    func lineSpacing(_ spacing: CGFloat) -> NSMutableAttributedString {
         let paraStyle = NSMutableParagraphStyle()
         paraStyle.lineSpacing = spacing
-        addAttribute(NSAttributedString.Key.paragraphStyle, value: paraStyle, range: NSMakeRange(0, string.count))
-        return self
+        base.addAttribute(NSAttributedString.Key.paragraphStyle, value: paraStyle, range: NSMakeRange(0, base.string.count))
+        return base
     }
     ///
     /// Sets the size of the string at the specified location
@@ -30,9 +43,9 @@ extension NSMutableAttributedString {
     ///
     /// - returns: NSMutableAttributedString
     ///
-    func sg_rangeFont(_ range: NSRange, _ font: UIFont) -> NSMutableAttributedString {
-        addAttribute(NSAttributedString.Key.font, value: font, range: range)
-        return self
+    func rangeFont(_ range: NSRange, _ font: UIFont) -> NSMutableAttributedString {
+        base.addAttribute(NSAttributedString.Key.font, value: font, range: range)
+        return base
     }
     ///
     /// Sets the color of the string at the specified location
@@ -42,9 +55,9 @@ extension NSMutableAttributedString {
     ///
     /// - returns: NSMutableAttributedString
     ///
-    func sg_rangeColor(_ range: NSRange, _ color: UIColor) -> NSMutableAttributedString {
-        addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
-        return self
+    func rangeColor(_ range: NSRange, _ color: UIColor) -> NSMutableAttributedString {
+        base.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
+        return base
     }
     ///
     /// Sets the color and size of the string at the specified location
@@ -55,10 +68,10 @@ extension NSMutableAttributedString {
     ///
     /// - returns: NSMutableAttributedString
     ///
-    func sg_rangeColorFont(_ range: NSRange, _ color: UIColor, _ font: UIFont) -> NSMutableAttributedString {
+    func rangeColorFont(_ range: NSRange, _ color: UIColor, _ font: UIFont) -> NSMutableAttributedString {
         let attrs = [NSAttributedString.Key.foregroundColor: color, NSAttributedString.Key.font: font]
-        addAttributes(attrs, range: range)
-        return self
+        base.addAttributes(attrs, range: range)
+        return base
     }
     ///
     /// Set the underline style and color for a specific location
@@ -69,10 +82,10 @@ extension NSMutableAttributedString {
     ///
     /// - returns: NSMutableAttributedString
     ///
-    func sg_underline(_ range: NSRange, _ style: NSUnderlineStyle, _ color: UIColor) -> NSMutableAttributedString {
+    func underline(_ range: NSRange, _ style: NSUnderlineStyle, _ color: UIColor) -> NSMutableAttributedString {
         let attrs = [NSAttributedString.Key.strikethroughStyle: NSNumber(value: style.rawValue), NSAttributedString.Key.strikethroughColor: color] as [NSAttributedString.Key : Any]
-        addAttributes(attrs, range: range)
-        return self
+        base.addAttributes(attrs, range: range)
+        return base
     }
     
     

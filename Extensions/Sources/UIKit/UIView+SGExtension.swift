@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+extension SG where Base: UIView {
     ///
     /// Loading view from Nib
     ///
@@ -18,7 +18,7 @@ extension UIView {
     ///
     /// - returns: View loaded from Nib
     ///
-    class func sg_loadFromNib(_ nibName: String? = nil) -> UIView {
+    static func loadFromNib(_ nibName: String? = nil) -> UIView {
         let name = nibName == nil ? "\(self)" : nibName!
         return Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as! UIView
     }
@@ -28,8 +28,8 @@ extension UIView {
     ///
     /// - returns: The controller where the current view is located
     ///
-    func sg_getController() -> UIViewController? {
-        var nextResponder: UIResponder? = self.next
+    func getController() -> UIViewController? {
+        var nextResponder: UIResponder? = base.next
         repeat {
             nextResponder = nextResponder?.next
             if let viewController = nextResponder as? UIViewController {
@@ -40,14 +40,13 @@ extension UIView {
     }
     
     /// Add view to window
-    func sg_addToKeyWindow() {
-        UIApplication.shared.windows.first?.addSubview(self)
+    func addToKeyWindow() {
+        UIApplication.shared.windows.first?.addSubview(base)
     }
     
     /// Remove all subviews on the view
-    func sg_removeAllSubviews() {
-        for tempSubviews in self.subviews {
-            print(tempSubviews);
+    func removeAllSubviews() {
+        for tempSubviews in base.subviews {
             tempSubviews.removeFromSuperview()
         }
     }
@@ -56,8 +55,8 @@ extension UIView {
     ///
     /// - parameter aClass: Remove the specified class
     ///
-    func sg_removeAllSubviewsIsMember(of aClass: AnyClass) {
-        for tempSubView in self.subviews {
+    func removeAllSubviewsIsMember(of aClass: AnyClass) {
+        for tempSubView in base.subviews {
             if tempSubView.isMember(of: aClass) {
                 tempSubView.removeFromSuperview()
             }
@@ -71,9 +70,9 @@ extension UIView {
     ///
     /// - parameter radius: Corner size
     ///
-    func sg_addCorner(radius: CGFloat) {
-        self.layer.cornerRadius = radius
-        self.layer.masksToBounds = true
+    func addCorner(radius: CGFloat) {
+        base.layer.cornerRadius = radius
+        base.layer.masksToBounds = true
     }
     ///
     /// Add Corner
@@ -83,12 +82,12 @@ extension UIView {
     /// - parameter radius: Corner size
     /// - parameter direction: Corner direction
     ///
-    func sg_addCorner(radius: CGFloat, direction: UIRectCorner) {
-        let bezierPath = UIBezierPath.init(roundedRect: self.bounds, byRoundingCorners: direction, cornerRadii: CGSize.init(width: radius, height: radius))
+    func addCorner(radius: CGFloat, direction: UIRectCorner) {
+        let bezierPath = UIBezierPath.init(roundedRect: base.bounds, byRoundingCorners: direction, cornerRadii: CGSize.init(width: radius, height: radius))
         let shapeLayer = CAShapeLayer.init()
-        shapeLayer.frame = self.bounds
+        shapeLayer.frame = base.bounds
         shapeLayer.path = bezierPath.cgPath
-        self.layer.mask = shapeLayer
+        base.layer.mask = shapeLayer
     }
     ///
     /// Add border width and border color
@@ -98,9 +97,9 @@ extension UIView {
     /// - parameter width: Border width
     /// - parameter color: Border color
     ///
-    func sg_addLayerBorder(width: CGFloat, color: UIColor) {
-        self.layer.borderWidth = width
-        self.layer.borderColor = color.cgColor
+    func addLayerBorder(width: CGFloat, color: UIColor) {
+        base.layer.borderWidth = width
+        base.layer.borderColor = color.cgColor
     }
     
     ///
@@ -110,13 +109,13 @@ extension UIView {
     /// - parameter offset: ShadowOffset
     /// - parameter radius: ShadowRadius
     ///
-    func sg_addShadow(color: UIColor, offset: CGSize, radius: CGFloat) {
-        self.layer.shadowColor = color.cgColor
-        self.layer.shadowOffset = offset
-        self.layer.shadowRadius = radius
-        self.layer.shadowOpacity = 1
-        self.layer.shouldRasterize = true
-        self.layer.rasterizationScale = UIScreen.main.scale
+    func addShadow(color: UIColor, offset: CGSize, radius: CGFloat) {
+        base.layer.shadowColor = color.cgColor
+        base.layer.shadowOffset = offset
+        base.layer.shadowRadius = radius
+        base.layer.shadowOpacity = 1
+        base.layer.shouldRasterize = true
+        base.layer.rasterizationScale = UIScreen.main.scale
     }
     
     

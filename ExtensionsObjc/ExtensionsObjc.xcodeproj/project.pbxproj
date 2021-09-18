@@ -124,7 +124,7 @@
 		8DA9D3D326EA0CB0009CBAFC = {
 			isa = PBXGroup;
 			children = (
-				8DA9D41426EA0D18009CBAFC /* Source */,
+				8DA9D41426EA0D18009CBAFC /* SourcesObjc */,
 				8DA9D3DE26EA0CB0009CBAFC /* ExtensionsObjc */,
 				8DA9D3FA26EA0CB5009CBAFC /* ExtensionsObjcTests */,
 				8DA9D40526EA0CB5009CBAFC /* ExtensionsObjcUITests */,
@@ -178,14 +178,14 @@
 			path = ExtensionsObjcUITests;
 			sourceTree = "<group>";
 		};
-		8DA9D41426EA0D18009CBAFC /* Source */ = {
+		8DA9D41426EA0D18009CBAFC /* SourcesObjc */ = {
 			isa = PBXGroup;
 			children = (
 				8DA9D43126EA0D18009CBAFC /* SGAppKit.h */,
 				8DA9D42C26EA0D18009CBAFC /* Foundation */,
 				8DA9D41526EA0D18009CBAFC /* UIKit */,
 			);
-			path = Source;
+			path = SourcesObjc;
 			sourceTree = "<group>";
 		};
 		8DA9D41526EA0D18009CBAFC /* UIKit */ = {
