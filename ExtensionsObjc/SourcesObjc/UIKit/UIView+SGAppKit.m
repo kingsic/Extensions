@@ -1,6 +1,6 @@
 //
 //  UIView+SGAppKit.m
-//  SGAppKitExample
+//  Extensions
 //
 //  Created by kingsic on 2016/10/9.
 //  Copyright © 2016年 kingsic. All rights reserved.

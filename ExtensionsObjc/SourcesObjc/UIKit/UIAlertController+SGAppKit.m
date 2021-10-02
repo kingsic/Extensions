@@ -1,6 +1,6 @@
 //
 //  UIAlertController+SGAppKit.m
-//  SGAppKitExample
+//  Extensions
 //
 //  Created by kingsic on 2021/4/1.
 //  Copyright © 2021年 kingsic. All rights reserved.

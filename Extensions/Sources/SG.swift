@@ -1,6 +1,6 @@
 //
 //  SG.swift
-//  SGExtensions
+//  Extensions
 //
 //  Created by kingsic on 2021/1/5.
 //  Copyright © 2021 kingsic. All rights reserved.

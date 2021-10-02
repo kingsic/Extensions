@@ -1,6 +1,6 @@
 //
 //  UIViewController+SGAppKit.m
-//  SGAppKitExample
+//  Extensions
 //
 //  Created by kingsic on 2019/7/13.
 //  Copyright © 2019年 kingsic. All rights reserved.

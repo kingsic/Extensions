@@ -26,9 +26,10 @@
 
 - (void)addSubViews {
     CGFloat space = 20;
-    CGFloat width = 0.5 * (self.view.frame.size.width - 3 * 20);
+    CGFloat width = self.view.frame.size.width;
+    CGFloat btn_width = 0.5 * (self.view.frame.size.width - 3 * 20);
     UIButton *leftBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    leftBtn.frame = CGRectMake(space, 100, width, 50);
+    leftBtn.frame = CGRectMake(space, 100, btn_width, 50);
     [leftBtn SG_addCornerRadius:10 rectCorner:(UIRectCornerTopLeft | UIRectCornerBottomLeft)];
     [leftBtn SG_imageLocationStyle:(SGImageLocationStyleLeft) spacing:5 imageLocationBlock:^(UIButton * _Nonnull button) {
         [button setTitle:@"left Btn" forState:(UIControlStateNormal)];
@@ -38,7 +39,7 @@
     [self.view addSubview:leftBtn];
     
     UIButton *rightBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    rightBtn.frame = CGRectMake(CGRectGetMaxX(leftBtn.frame) + space, 100, width, 50);
+    rightBtn.frame = CGRectMake(CGRectGetMaxX(leftBtn.frame) + space, 100, btn_width, 50);
     [rightBtn SG_addCornerRadius:10 rectCorner:(UIRectCornerTopRight | UIRectCornerBottomRight)];
     [rightBtn SG_imageLocationStyle:(SGImageLocationStyleRight) spacing:5 imageLocationBlock:^(UIButton * _Nonnull button) {
         [button setTitle:@"right Btn" forState:(UIControlStateNormal)];
@@ -62,6 +63,14 @@
     [lab SG_addTapActionWithBlock:^{
         NSLog(@"SG_addTapActionWithBlock");
     }];
+    
+    UITextField *tf = [[UITextField alloc] init];
+    tf.placeholder = @"请输入您的内容";
+    tf.frame = CGRectMake(space, CGRectGetMaxY(lab.frame) + space, width - 2 * space, 50);
+    tf.backgroundColor = [UIColor greenColor];
+    [tf SG_addCornerRadius:10];
+    [tf SG_setPlaceholderColor:[UIColor redColor] font:[UIFont systemFontOfSize:18]];
+    [self.view addSubview:tf];
 }
 
 #pragma mark - - action

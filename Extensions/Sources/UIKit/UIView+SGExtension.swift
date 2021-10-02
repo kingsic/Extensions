@@ -109,7 +109,7 @@ extension SG where Base: UIView {
     /// - parameter offset: ShadowOffset
     /// - parameter radius: ShadowRadius
     ///
-    func addShadow(color: UIColor, offset: CGSize, radius: CGFloat) {
+    func addLayerShadow(color: UIColor, offset: CGSize, radius: CGFloat) {
         base.layer.shadowColor = color.cgColor
         base.layer.shadowOffset = offset
         base.layer.shadowRadius = radius

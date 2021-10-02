@@ -1,6 +1,6 @@
 //
 //  UITextView+SGAppKit.h
-//  SGAppKitExample
+//  Extensions
 //
 //  Created by kingsic on 2020/6/23.
 //  Copyright © 2020 kingsic. All rights reserved.

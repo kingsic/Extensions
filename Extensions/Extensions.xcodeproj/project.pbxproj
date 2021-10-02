@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D7B52942704166900EEBC68 /* UIRegister+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B52932704166900EEBC68 /* UIRegister+SGExtension.swift */; };
+		8D7D6939270177FC00BB8717 /* NSAttributedString+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D6938270177FC00BB8717 /* NSAttributedString+SGExtension.swift */; };
 		8D989CEA26F0334800AB1FC9 /* SG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D989CE826F0334700AB1FC9 /* SG.swift */; };
 		8D989CEF26F0AD9600AB1FC9 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D989CEE26F0AD9600AB1FC9 /* NextViewController.swift */; };
 		8DA9D2EB26EA06BA009CBAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9D2EA26EA06BA009CBAFC /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D7B52932704166900EEBC68 /* UIRegister+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRegister+SGExtension.swift"; sourceTree = "<group>"; };
+		8D7D6938270177FC00BB8717 /* NSAttributedString+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+SGExtension.swift"; sourceTree = "<group>"; };
 		8D989CE826F0334700AB1FC9 /* SG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SG.swift; sourceTree = "<group>"; };
 		8D989CEE26F0AD9600AB1FC9 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		8DA9D2E726EA06BA009CBAFC /* Extensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +173,7 @@
 				8DA9D35A26EA07FB009CBAFC /* UIBarButtonItem+SGExtension.swift */,
 				8DA9D35526EA07FB009CBAFC /* UIButton+SGExtension.swift */,
 				8DA9D35B26EA07FB009CBAFC /* UIImage+SGExtension.swift */,
+				8D7B52932704166900EEBC68 /* UIRegister+SGExtension.swift */,
 				8DA9D35426EA07FB009CBAFC /* UITextField+SGExtension.swift */,
 				8DA9D35826EA07FB009CBAFC /* UIView+SGExtension.swift */,
 				8DA9D35626EA07FB009CBAFC /* UIViewController+SGExtension.swift */,
@@ -179,6 +184,7 @@
 		8DA9D36626EA089C009CBAFC /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				8D7D6938270177FC00BB8717 /* NSAttributedString+SGExtension.swift */,
 				8DA9D35726EA07FB009CBAFC /* NSMutableAttributedString+SGExtension.swift */,
 				8DA9D35326EA07FB009CBAFC /* String+SGExtension.swift */,
 			);
@@ -316,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA9D35D26EA07FB009CBAFC /* UITextField+SGExtension.swift in Sources */,
+				8D7D6939270177FC00BB8717 /* NSAttributedString+SGExtension.swift in Sources */,
 				8D989CEF26F0AD9600AB1FC9 /* NextViewController.swift in Sources */,
 				8DA9D36126EA07FC009CBAFC /* UIView+SGExtension.swift in Sources */,
 				8DA9D35C26EA07FB009CBAFC /* String+SGExtension.swift in Sources */,
@@ -325,6 +332,7 @@
 				8DA9D36226EA07FC009CBAFC /* UIColor+SGExtension.swift in Sources */,
 				8D989CEA26F0334800AB1FC9 /* SG.swift in Sources */,
 				8DA9D35E26EA07FB009CBAFC /* UIButton+SGExtension.swift in Sources */,
+				8D7B52942704166900EEBC68 /* UIRegister+SGExtension.swift in Sources */,
 				8DA9D2EB26EA06BA009CBAFC /* AppDelegate.swift in Sources */,
 				8DA9D2ED26EA06BA009CBAFC /* SceneDelegate.swift in Sources */,
 				8DA9D35F26EA07FC009CBAFC /* UIViewController+SGExtension.swift in Sources */,

@@ -9,14 +9,18 @@
 import UIKit
 
 extension SG where Base: UITextField {
+    
+    /// The placeholder color and font size of UITextField
     ///
-    /// Set the placeholder color of UITextField
+    /// - parameter color: Placeholder color，default is drawn 70% gray
     ///
-    /// - parameter color: Placeholder color
-    ///
-    func setPlaceholder(color: UIColor) {
+    /// - parameter font: Placeholder font，default is use system font 17 pt
+    func placeholder(color: UIColor, font: UIFont = .systemFont(ofSize: 17)) {
         guard let tempPlaceholder = base.placeholder else { return }
-        let attributes = [NSAttributedString.Key.foregroundColor: color]
+        let attributes = [
+            NSAttributedString.Key.foregroundColor: color,
+            NSAttributedString.Key.font: font
+        ]
         let attributedString = NSAttributedString(string: tempPlaceholder, attributes: attributes)
         base.attributedPlaceholder = attributedString
     }

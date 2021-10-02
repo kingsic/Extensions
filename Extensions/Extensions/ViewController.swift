@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     func addSubViews() {
         let space: CGFloat = 20
+        let width: CGFloat = view.frame.size.width
         let btn_width: CGFloat = 0.5 * (view.frame.size.width - 3 * space)
         
         let leftBtn = UIButton()
@@ -49,14 +50,21 @@ class ViewController: UIViewController {
         view.addSubview(rightBtn)
         
         let lab = UILabel()
-        lab.frame = CGRect(x: space, y: leftBtn.frame.maxY + space, width: view.frame.size.width - 2 * space, height: 50)
+        lab.frame = CGRect(x: space, y: leftBtn.frame.maxY + space, width: width - 2 * space, height: 50)
         lab.backgroundColor = .sg.randomColor
         lab.sg.addCorner(radius: 10)
         lab.textColor = .white
         lab.textAlignment = .center
         view.addSubview(lab)
         lab.attributedText = NSMutableAttributedString(string: "曾经沧海难为水，除却巫山不是云").sg.rangeFont(NSMakeRange(0, 2), .boldSystemFont(ofSize: 22)).sg.rangeColorFont(NSMakeRange(12, 3), .lightGray, .systemFont(ofSize: 13)).sg.underline(NSMakeRange(12, 3), .single, .lightGray)
-
+        
+        let textField = UITextField()
+        textField.backgroundColor = .green
+        textField.frame = CGRect(x: space, y: lab.frame.maxY + space, width: width - 2 * space, height: 50)
+        textField.sg.addCorner(radius: 10)
+        textField.placeholder = "请输入您的内容"
+        textField.sg.placeholder(color: .red)
+        view.addSubview(textField)
     }
     
     

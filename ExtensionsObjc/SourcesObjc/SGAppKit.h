@@ -1,6 +1,6 @@
 //
 //  SGAppKit.h
-//  SGAppKitExample
+//  Extensions
 //  
 //  Created by kingsic on 2018/1/13.
 //  Copyright © 2018年 kingsic. All rights reserved.
