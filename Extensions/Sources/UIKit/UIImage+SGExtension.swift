@@ -9,11 +9,9 @@
 import UIKit
 
 extension SG where Base: UIImage {
-    ///
     /// Circle UIImage
     ///
     /// - returns: The height of the calculated string
-    ///
     func circleImage() -> UIImage {
         UIGraphicsBeginImageContext(base.size)
         let context = UIGraphicsGetCurrentContext()
@@ -25,13 +23,12 @@ extension SG where Base: UIImage {
         UIGraphicsEndImageContext()
         return newimage!
     }
-    ///
+
     /// Circle UIImage
     ///
     /// - parameter named: The name of the image
     ///
     /// - returns: Circle Image
-    ///
     static func circleImage(named: String) -> UIImage {
         return (Base.init(named: named)?.sg.circleImage())!
     }

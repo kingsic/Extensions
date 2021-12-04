@@ -13,13 +13,11 @@ enum SGImageLocation {
 }
 
 extension SG where Base: UIButton {
-    ///
     /// Time interval of continuous button click
     ///
     /// - parameter time: Interval time
     ///
     /// - note: Used in the click event method of a button
-    ///
     func timeInterval(time: TimeInterval) {
         base.isUserInteractionEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + time) {
@@ -27,7 +25,6 @@ extension SG where Base: UIButton {
         }
     }
     
-    ///
     /// Set image location
     ///
     /// Image and title must be set before this method will work, It is recommended to set it inside the block
@@ -35,19 +32,16 @@ extension SG where Base: UIButton {
     /// - parameter location: location of image relative to title
     /// - parameter space: space between image and title
     /// - parameter completion: set image and title
-    ///
     func setImage(location: SGImageLocation, space: CGFloat, completion: (UIButton) -> ()) {
         completion(base)
         setImage(location: location, space: space)
     }
-    ///
     /// Set image location
     ///
     /// Image and title must be set before this method will work
     ///
     /// - parameter location: Location of image relative to title
     /// - parameter space: Space between image and title
-    ///
     func setImage(location: SGImageLocation, space: CGFloat) {
         
         let imageView_Width = base.imageView?.frame.size.width
@@ -89,7 +83,6 @@ extension SG where Base: UIButton {
         }
     }
     
-    ///
     /// Send SMS verification code
     ///
     /// The countdown time is in seconds
@@ -99,7 +92,6 @@ extension SG where Base: UIButton {
     /// - parameter behind: Text after number
     /// - parameter end: Button title after completion
     /// - parameter completion: Completed Block
-    ///
     func sendSMSVerification(second: Int, front: String?, behind: String?, end: String, completion: (() -> ())?) {
         var tempSecond = second
         

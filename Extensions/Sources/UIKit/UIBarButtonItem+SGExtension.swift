@@ -9,7 +9,6 @@
 import UIKit
 
 extension SG where Base: UIBarButtonItem {
-    ///
     /// Return UIBarButtonItem with text only
     ///
     /// - parameter target: Target
@@ -19,7 +18,6 @@ extension SG where Base: UIBarButtonItem {
     /// - parameter textFont: Text font size
     ///
     /// - returns: UIBarButtonItem
-    ///
     static func barButtonItem(target: Any, action: Selector, text: String, textColor: UIColor, textFont: UIFont) -> UIBarButtonItem {
         let btn = UIButton(type: .custom)
         btn.setTitle(text, for: .normal)
@@ -30,7 +28,6 @@ extension SG where Base: UIBarButtonItem {
         return UIBarButtonItem(customView: btn)
     }
     
-    ///
     /// Return UIBarButtonItem with image only
     ///
     /// - parameter target: Target
@@ -39,7 +36,6 @@ extension SG where Base: UIBarButtonItem {
     /// - parameter highImageName: Image name in highlighted state
     ///
     /// - returns: UIBarButtonItem
-    ///
     static func barButtonItem(target: Any, action: Selector, imageName: String, highImageName: String) -> UIBarButtonItem {
         let btn = UIButton(type: .custom)
         btn.setBackgroundImage(UIImage(named: imageName), for: .normal)

@@ -11,6 +11,10 @@
 
 * `UIImage`<br>
 
+* `UIReuseCell`<br>
+
+* `UIScreen`<br>
+
 * `UITextField`<br>
 
 * `UIView`<br>

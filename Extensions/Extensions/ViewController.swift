@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         
         // Test code
         addSubViews()
+        
+        print("当前屏幕大小：\(UIScreen.size)\n状态栏高度：\(UIScreen.statusBarHeight)\n导航栏高度：\(UIScreen.navBarHeight)\ntabBar高度：\(UIScreen.tabBarHeight)\n底部安全区：\(UIScreen.safeAreaInsetBottom)")
     }
     
     
@@ -52,7 +54,7 @@ class ViewController: UIViewController {
         let lab = UILabel()
         lab.frame = CGRect(x: space, y: leftBtn.frame.maxY + space, width: width - 2 * space, height: 50)
         lab.backgroundColor = .sg.randomColor
-        lab.sg.addCorner(radius: 10)
+        lab.sg.addLayerCorner(radius: 10, masksToBounds: true)
         lab.textColor = .white
         lab.textAlignment = .center
         view.addSubview(lab)
@@ -61,10 +63,17 @@ class ViewController: UIViewController {
         let textField = UITextField()
         textField.backgroundColor = .green
         textField.frame = CGRect(x: space, y: lab.frame.maxY + space, width: width - 2 * space, height: 50)
-        textField.sg.addCorner(radius: 10)
+        textField.sg.addLayerCorner(radius: 10)
         textField.placeholder = "请输入您的内容"
         textField.sg.placeholder(color: .red)
         view.addSubview(textField)
+        
+        let gradientView_width: CGFloat = 200
+        let gradientView_x: CGFloat = 0.5 * (width - gradientView_width)
+        let gradientView = UIView()
+        gradientView.frame = CGRect(x: gradientView_x, y: textField.frame.maxY + space, width: gradientView_width, height: 200)
+        view.addSubview(gradientView)
+        gradientView.sg.addCAGradientLayer(colors: [UIColor.black.cgColor, UIColor.white.cgColor], startPoint: CGPoint(x: 0, y: 0.5), endPoint: CGPoint(x: 1, y: 0.5))
     }
     
     

@@ -19,14 +19,12 @@ extension SG where Base: UIColor {
         }
     }
     
-    ///
     /// Conversion of hexadecimal encoding to RGB format
     ///
     /// - parameter hexString: Hexadecimal code
     /// - parameter alpha: CGFloat, default is 1.0
     ///
     /// - returns: Hexadecimal coded color
-    ///
     static func color(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         let tempHexString = hexString.replacingOccurrences(of: "#", with: "")
         let scanner = Scanner(string: tempHexString)

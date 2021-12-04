@@ -3,6 +3,7 @@
 //  Extensions
 //
 //  Created by kingsic on 2021/9/29.
+//  Copyright © 2021 kingsic. All rights reserved.
 //
 
 import UIKit

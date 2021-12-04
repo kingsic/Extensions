@@ -9,7 +9,6 @@
 import UIKit
 
 extension SG where Base: UIView {
-    ///
     /// Loading view from Nib
     ///
     /// Nibname doesn't need to be passed, If empty, the caller's own name
@@ -17,17 +16,14 @@ extension SG where Base: UIView {
     /// - parameter nibName: Nib View name, can be empty
     ///
     /// - returns: View loaded from Nib
-    ///
     static func loadFromNib(_ nibName: String? = nil) -> UIView {
         let name = nibName == nil ? "\(self)" : nibName!
         return Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as! UIView
     }
     
-    ///
     /// Gets the controller where the current view is located
     ///
     /// - returns: The controller where the current view is located
-    ///
     func getController() -> UIViewController? {
         var nextResponder: UIResponder? = base.next
         repeat {
@@ -50,11 +46,10 @@ extension SG where Base: UIView {
             tempSubviews.removeFromSuperview()
         }
     }
-    ///
+
     /// Removes the subview with the specified class name on the view
     ///
     /// - parameter aClass: Remove the specified class
-    ///
     func removeAllSubviewsIsMember(of aClass: AnyClass) {
         for tempSubView in base.subviews {
             if tempSubView.isMember(of: aClass) {
@@ -62,26 +57,14 @@ extension SG where Base: UIView {
             }
         }
     }
-    
-    ///
-    /// Add Corner
-    ///
-    /// Use the layer to add corner to the view
-    ///
-    /// - parameter radius: Corner size
-    ///
-    func addCorner(radius: CGFloat) {
-        base.layer.cornerRadius = radius
-        base.layer.masksToBounds = true
-    }
-    ///
+
+
     /// Add Corner
     ///
     /// Use UIBezierPath and CAShapeLayer to add corner to the view
     ///
     /// - parameter radius: Corner size
     /// - parameter direction: Corner direction
-    ///
     func addCorner(radius: CGFloat, direction: UIRectCorner) {
         let bezierPath = UIBezierPath.init(roundedRect: base.bounds, byRoundingCorners: direction, cornerRadii: CGSize.init(width: radius, height: radius))
         let shapeLayer = CAShapeLayer.init()
@@ -89,26 +72,49 @@ extension SG where Base: UIView {
         shapeLayer.path = bezierPath.cgPath
         base.layer.mask = shapeLayer
     }
+    
+    /// Add layer cornerRadius
     ///
+    /// Use the layer to add corner to the view
+    ///
+    /// - parameter radius: Corner size
+    func addLayerCorner(radius: CGFloat, masksToBounds: Bool = false) {
+        base.layer.cornerRadius = radius
+        if masksToBounds == true {
+            base.layer.masksToBounds = true
+        }
+    }
+    
     /// Add border width and border color
     ///
     /// Use layer to add border width and border color
     ///
     /// - parameter width: Border width
     /// - parameter color: Border color
-    ///
     func addLayerBorder(width: CGFloat, color: UIColor) {
         base.layer.borderWidth = width
         base.layer.borderColor = color.cgColor
     }
     
+    /// Add CAGradientLayer
     ///
+    /// - parameter width: colors
+    /// - parameter color: startPoint
+    /// - parameter color: endPoint
+    func addCAGradientLayer(colors: [Any]?, startPoint: CGPoint, endPoint: CGPoint) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = base.bounds
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = startPoint
+        gradientLayer.endPoint = endPoint
+        base.layer.addSublayer(gradientLayer)
+    }
+
     /// Add a shadow to the view
     ///
     /// - parameter color: ShadowColor
     /// - parameter offset: ShadowOffset
     /// - parameter radius: ShadowRadius
-    ///
     func addLayerShadow(color: UIColor, offset: CGSize, radius: CGFloat) {
         base.layer.shadowColor = color.cgColor
         base.layer.shadowOffset = offset

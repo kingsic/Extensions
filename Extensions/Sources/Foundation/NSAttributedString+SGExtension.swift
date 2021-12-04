@@ -1,8 +1,9 @@
 //
-//  NSAttributedString2.swift
-//  Test
+//  NSAttributedString+SGExtension.swift
+//  Extensions
 //
 //  Created by kingsic on 2021/9/27.
+//  Copyright © 2021 kingsic. All rights reserved.
 //
 
 import UIKit

@@ -51,27 +51,63 @@ extension String {
 }
 
 
+// MARK: - - 字符串截取相关函数
+extension String {
+    /// 截取特殊字符串前面的所有字符串并返回
+    func interceptFront(special: String) -> String {
+        let tempStr = self
+        let range: Range = tempStr.range(of: special)!
+        let location: Int = tempStr.distance(from: tempStr.startIndex, to: range.lowerBound)
+        let behindStr = tempStr.prefix(location)
+        return String(behindStr)
+    }
+    /// 截取包含特殊字符串及其前面的所有字符串并返回
+    func interceptFrontContain(special: String) -> String {
+        let tempStr = self
+        let range: Range = tempStr.range(of: special)!
+        let location: Int = tempStr.distance(from: tempStr.startIndex, to: range.upperBound)
+        let behindStr = tempStr.prefix(location)
+        return String(behindStr)
+    }
+    
+    /// 截取特殊字符串后面的所有字符串并返回
+    func interceptBehind(special: String) -> String {
+        let tempStr = self
+        let range: Range = tempStr.range(of: special)!
+        let location: Int = tempStr.distance(from: tempStr.startIndex, to: range.upperBound)
+        let behindStr = tempStr.suffix(tempStr.count - location)
+        return String(behindStr)
+    }
+    /// 截取包含特殊字符串及其后面的所有字符串并返回
+    func interceptBehindContain(special: String) -> String {
+        let tempStr = self
+        let range: Range = tempStr.range(of: special)!
+        let location: Int = tempStr.distance(from: tempStr.startIndex, to: range.lowerBound)
+        let behindStr = tempStr.suffix(tempStr.count - location)
+        return String(behindStr)
+    }
+}
+
+
+// MARK: - - 获取字符串相关尺寸的函数
 extension SG where Base == String {
-    ///
     /// Calculate the width of the string according to the font size
     ///
     /// - parameter font: UIFont
     ///
     /// - returns: The width of the calculated string
-    ///
     func calculateStringWidth(font: UIFont) -> CGFloat {
         let attrs = [NSAttributedString.Key.font: font]
         let tempRect = (base as NSString).boundingRect(with: CGSize(width: 0, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs, context: nil)
         return tempRect.size.width
     }
-    ///
+
     /// Calculate the height of a string based on width and font size
     ///
     /// - parameter width: CGFloat
     /// - parameter font: UIFont
     ///
     /// - returns: The height of the calculated string
-    ///
     func calculateStringHeight(width: CGFloat, font: UIFont) -> CGFloat {
         let attrs = [NSAttributedString.Key.font: font]
         let tempRect = (base as NSString).boundingRect(with: CGSize(width: width, height: 0), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrs, context: nil)

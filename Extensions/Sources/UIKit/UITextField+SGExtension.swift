@@ -9,7 +9,6 @@
 import UIKit
 
 extension SG where Base: UITextField {
-    
     /// The placeholder color and font size of UITextField
     ///
     /// - parameter color: Placeholder color，default is drawn 70% gray
