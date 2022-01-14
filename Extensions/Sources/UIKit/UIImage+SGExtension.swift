@@ -33,5 +33,15 @@ extension SG where Base: UIImage {
         return (Base.init(named: named)?.sg.circleImage())!
     }
     
+    /// Convert UIView to UIImage
+    static func image(view: UIView) -> UIImage {
+        UIGraphicsBeginImageContext(view.bounds.size)
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, UIScreen.main.scale)
+        let ctx = UIGraphicsGetCurrentContext()
+        view.layer.render(in: ctx!)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
     
 }
