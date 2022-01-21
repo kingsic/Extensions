@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D307ACD279B307A009F22E1 /* Date+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D307ACC279B307A009F22E1 /* Date+SGExtension.swift */; };
 		8D407FDB2757601A00B943B6 /* UIScreen+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D407FDA2757601A00B943B6 /* UIScreen+SGExtension.swift */; };
 		8D407FDD2759C4F900B943B6 /* UIView+SGFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D407FDC2759C4F900B943B6 /* UIView+SGFrame.swift */; };
 		8D7B52942704166900EEBC68 /* UIRegister+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B52932704166900EEBC68 /* UIRegister+SGExtension.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D307ACC279B307A009F22E1 /* Date+SGExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+SGExtension.swift"; sourceTree = "<group>"; };
 		8D407FDA2757601A00B943B6 /* UIScreen+SGExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+SGExtension.swift"; sourceTree = "<group>"; };
 		8D407FDC2759C4F900B943B6 /* UIView+SGFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SGFrame.swift"; sourceTree = "<group>"; };
 		8D7B52932704166900EEBC68 /* UIRegister+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRegister+SGExtension.swift"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		8DA9D36626EA089C009CBAFC /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				8D307ACC279B307A009F22E1 /* Date+SGExtension.swift */,
 				8D7D6938270177FC00BB8717 /* NSAttributedString+SGExtension.swift */,
 				8DA9D35726EA07FB009CBAFC /* NSMutableAttributedString+SGExtension.swift */,
 				8DA9D35326EA07FB009CBAFC /* String+SGExtension.swift */,
@@ -331,6 +334,7 @@
 				8D7D6939270177FC00BB8717 /* NSAttributedString+SGExtension.swift in Sources */,
 				8D407FDD2759C4F900B943B6 /* UIView+SGFrame.swift in Sources */,
 				8D989CEF26F0AD9600AB1FC9 /* NextViewController.swift in Sources */,
+				8D307ACD279B307A009F22E1 /* Date+SGExtension.swift in Sources */,
 				8DA9D36126EA07FC009CBAFC /* UIView+SGExtension.swift in Sources */,
 				8DA9D35C26EA07FB009CBAFC /* String+SGExtension.swift in Sources */,
 				8DA9D36026EA07FC009CBAFC /* NSMutableAttributedString+SGExtension.swift in Sources */,
