@@ -41,6 +41,18 @@ extension SG where Base: UIColor {
         let blue  = CGFloat(b) / 255.0
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
-    
-    
+}
+
+extension UIColor {
+    /// Convert colors to UIImage
+    func toImage() -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: 1.0, height: 1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let contextRef = UIGraphicsGetCurrentContext()
+        contextRef?.setFillColor(self.cgColor)
+        contextRef?.fill(rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
 }

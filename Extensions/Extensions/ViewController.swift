@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         leftBtn.backgroundColor = UIColor.orange
         leftBtn.sg.addCorner(radius: 10, direction: [.topLeft, .bottomLeft])
         leftBtn.sg.setImage(location: .left, space: 10) { (btn) in
-            btn.setTitle("next vc", for: .normal)
+            btn.setTitle("验证码", for: .normal)
             btn.setImage(UIImage.init(named: "test_img"), for: .normal)
         }
         leftBtn.addTarget(self, action: #selector(leftBtn_action(_:)), for: .touchUpInside)
@@ -58,8 +58,8 @@ class ViewController: UIViewController {
         lab.textColor = .white
         lab.textAlignment = .center
         view.addSubview(lab)
-        lab.attributedText = NSMutableAttributedString(string: "曾经沧海难为水，除却巫山不是云").sg.rangeFont(NSMakeRange(0, 2), .boldSystemFont(ofSize: 22)).sg.rangeColorFont(NSMakeRange(12, 3), .lightGray, .systemFont(ofSize: 13)).sg.underline(NSMakeRange(12, 3), .single, .lightGray)
-        
+        lab.attributedText = NSMutableAttributedString(string: "曾经沧海难为水，除却巫山不是云").font(.boldSystemFont(ofSize: 22), NSMakeRange(0, 2)).foregroundColor(.red, NSMakeRange(2, 5)).strikethrough(2, .black, NSMakeRange(12, 3))
+
         let textField = UITextField()
         textField.backgroundColor = .green
         textField.frame = CGRect(x: space, y: lab.frame.maxY + space, width: width - 2 * space, height: 50)

@@ -27,17 +27,6 @@ class NextViewController: UIViewController {
         view.addSubview(btn)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     deinit {
         print("deinit")
     }
@@ -47,7 +36,7 @@ class NextViewController: UIViewController {
 extension NextViewController {
     // item
     @objc func btn_action(_ btn: UIButton) {        print("leftBarButtonItem_action")
-        btn.sg.sendSMSVerification(second: 30, front: "剩余", behind: "秒", end: "重新获取验证码") {
+        btn.sendSMSVerification(second: 30, front: "剩余", behind: "秒", end: "重新获取验证码") {
             
         }
     

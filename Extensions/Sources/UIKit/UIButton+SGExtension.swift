@@ -82,7 +82,40 @@ extension SG where Base: UIButton {
             base.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: -imageView_Width!, bottom: imageView_Height! + space, right: 0)
         }
     }
+}
+
+
+public extension UIButton {
+    struct RuntimeKey {
+        static let buttonKey = UnsafeRawPointer.init(bitPattern: "BTNKey".hashValue)
+    }
     
+    /// 按钮的响应区域设置
+    var contentInset: UIEdgeInsets? {
+        set {
+            objc_setAssociatedObject(self, RuntimeKey.buttonKey!, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY)
+        }
+        get {
+            return objc_getAssociatedObject(self, RuntimeKey.buttonKey!) as? UIEdgeInsets ?? UIEdgeInsets.zero
+        }
+    }
+        
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        if (contentInset! == UIEdgeInsets.zero) || !isEnabled || isHidden {
+            return super.point(inside: point, with: event)
+        } else {
+            let expandArea = self.bounds.inset(by: contentInset!)
+            return expandArea.contains(point)
+        }
+    }
+    
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        return super.hitTest(point, with: event)
+    }
+}
+
+
+public extension UIButton {
     /// Send SMS verification code
     ///
     /// The countdown time is in seconds
@@ -102,8 +135,8 @@ extension SG where Base: UIButton {
             if tempSecond <= 1 {
                 timer.cancel()
                 DispatchQueue.main.async {
-                    base.isEnabled = true
-                    base.setTitle("\(end)", for: .normal)
+                    self.isEnabled = true
+                    self.setTitle("\(end)", for: .normal)
                     if completion != nil {
                         completion!()
                     }
@@ -111,13 +144,12 @@ extension SG where Base: UIButton {
             } else {
                 tempSecond -= 1;
                 DispatchQueue.main.async {
-                    base.isEnabled = false
-                    base.setTitle("\(front ?? "")\(tempSecond)\(behind ?? "")", for: .normal)
+                    self.isEnabled = false
+                    self.setTitle("\(front ?? "")\(tempSecond)\(behind ?? "")", for: .normal)
                 }
             }
         }
         timer.resume()
     }
-    
-    
 }
+

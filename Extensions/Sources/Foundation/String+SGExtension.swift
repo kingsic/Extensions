@@ -114,3 +114,10 @@ extension SG where Base == String {
         return tempRect.size.height
     }
 }
+
+extension String {
+    /// Remove all spaces
+    var removeAllSapce: String {
+        return self.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+    }
+}
