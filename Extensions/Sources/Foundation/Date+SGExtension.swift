@@ -7,18 +7,33 @@
 
 import Foundation
 
-extension Date {
+extension Date {    
     /// Get current timestamp
-    var timeStamp: String {
-        let timeInterval = self.timeIntervalSince1970
-        let timeStamp = CLongLong(round(timeInterval))
-        return "\(timeStamp)"
+    ///
+    /// - parameter milli: 是否以毫秒为单位，默认为：false
+    ///
+    /// - returns: current timestamp
+    static func timeStamp(milli: Bool = false) -> String {
+        let date = Date()
+        var timeInterval = date.timeIntervalSince1970
+        if milli {
+            timeInterval = timeInterval * 1000
+        }
+        let millisecond = CLongLong(round(timeInterval))
+        return "\(millisecond)"
     }
     
-    /// Get current timestamp
-    var milliTimeStamp: String {
-        let timeInterval = self.timeIntervalSince1970
-        let millisecond = CLongLong(round(timeInterval*1000))
-        return "\(millisecond)"
+    
+    /// Get current date
+    ///
+    /// - parameter dateFormat: Date format，默认为：yyyy-MM-dd HH:mm:ss
+    ///
+    /// - returns: Date after conversion
+    static func date(dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> (string: String, date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        let dateString = dateFormatter.string(from: Date())
+        let date = dateFormatter.date(from: dateString)!
+        return (dateString, date)
     }
 }

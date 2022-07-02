@@ -1,6 +1,8 @@
 
 ## Extensions
 
+* `Date`<br>
+
 * `String`<br>
 
 * `UIBarButtonItem`<br>
