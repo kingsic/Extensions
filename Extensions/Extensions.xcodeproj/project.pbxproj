@@ -10,6 +10,7 @@
 		8D307ACD279B307A009F22E1 /* Date+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D307ACC279B307A009F22E1 /* Date+SGExtension.swift */; };
 		8D407FDB2757601A00B943B6 /* UIScreen+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D407FDA2757601A00B943B6 /* UIScreen+SGExtension.swift */; };
 		8D407FDD2759C4F900B943B6 /* UIView+SGFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D407FDC2759C4F900B943B6 /* UIView+SGFrame.swift */; };
+		8D62C3412940D473007F50D3 /* NotificationCenter+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62C3402940D473007F50D3 /* NotificationCenter+SGExtension.swift */; };
 		8D7B52942704166900EEBC68 /* UIRegister+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B52932704166900EEBC68 /* UIRegister+SGExtension.swift */; };
 		8D7D6939270177FC00BB8717 /* NSAttributedString+SGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D6938270177FC00BB8717 /* NSAttributedString+SGExtension.swift */; };
 		8D989CEA26F0334800AB1FC9 /* SG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D989CE826F0334700AB1FC9 /* SG.swift */; };
@@ -54,6 +55,7 @@
 		8D307ACC279B307A009F22E1 /* Date+SGExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+SGExtension.swift"; sourceTree = "<group>"; };
 		8D407FDA2757601A00B943B6 /* UIScreen+SGExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+SGExtension.swift"; sourceTree = "<group>"; };
 		8D407FDC2759C4F900B943B6 /* UIView+SGFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SGFrame.swift"; sourceTree = "<group>"; };
+		8D62C3402940D473007F50D3 /* NotificationCenter+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+SGExtension.swift"; sourceTree = "<group>"; };
 		8D7B52932704166900EEBC68 /* UIRegister+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRegister+SGExtension.swift"; sourceTree = "<group>"; };
 		8D7D6938270177FC00BB8717 /* NSAttributedString+SGExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+SGExtension.swift"; sourceTree = "<group>"; };
 		8D989CE826F0334700AB1FC9 /* SG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SG.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				8D307ACC279B307A009F22E1 /* Date+SGExtension.swift */,
+				8D62C3402940D473007F50D3 /* NotificationCenter+SGExtension.swift */,
 				8D7D6938270177FC00BB8717 /* NSAttributedString+SGExtension.swift */,
 				8DA9D35726EA07FB009CBAFC /* NSMutableAttributedString+SGExtension.swift */,
 				8DA9D35326EA07FB009CBAFC /* String+SGExtension.swift */,
@@ -347,6 +350,7 @@
 				8D7B52942704166900EEBC68 /* UIRegister+SGExtension.swift in Sources */,
 				8DA9D2EB26EA06BA009CBAFC /* AppDelegate.swift in Sources */,
 				8DA9D2ED26EA06BA009CBAFC /* SceneDelegate.swift in Sources */,
+				8D62C3412940D473007F50D3 /* NotificationCenter+SGExtension.swift in Sources */,
 				8DA9D35F26EA07FC009CBAFC /* UIViewController+SGExtension.swift in Sources */,
 				8DA9D36426EA07FC009CBAFC /* UIImage+SGExtension.swift in Sources */,
 			);

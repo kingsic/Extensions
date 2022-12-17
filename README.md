@@ -3,6 +3,8 @@
 
 * `Date`<br>
 
+* `NotificationCenter`<br>
+
 * `String`<br>
 
 * `UIBarButtonItem`<br>
